@@ -18,3 +18,4 @@ The two telephone numbers, email and Lahore office address are supplied details.
 Insights and Media are publishing structures. No authentic client articles, recordings or publication dates were supplied. The handover state therefore uses empty public sections and archives. Temporary DEVELOPMENT SAMPLE entries used for testing are removed before handover. No test database or publication is packaged for production.
 
 No testimonials, reviews, success percentages, case counts, awards, media partnerships or attributed quotations were invented. Reading time is calculated from word count; recording duration/channel are optional supplied values.
+
