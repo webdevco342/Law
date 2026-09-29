@@ -356,7 +356,7 @@
 
     const attemptLogin = () => {
       if (adminPasswordInput.value === "admin123") {
-        window.location.href = "/wp-admin";
+        window.location.href = "/wp-login.php";
       } else {
         adminErrorMsg.style.display = "block";
       }
