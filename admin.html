@@ -130,11 +130,12 @@
       .form-group input, .form-group textarea {
         width: 100%;
         padding: 12px;
-        border: 1px solid var(--admin-border);
-        border-radius: 6px;
+        border: 1px solid var(--admin-border) !important;
+        border-radius: 6px !important;
         font-family: var(--font-body);
-        font-size: 15px;
-        color: var(--admin-text);
+        font-size: 15px !important;
+        color: var(--admin-text) !important;
+        background-color: var(--admin-surface) !important;
         box-sizing: border-box;
         transition: border-color 0.2s, box-shadow 0.2s;
       }
@@ -179,7 +180,9 @@
     <aside class="admin-sidebar">
       <h1>Qurat-ul-Ain<br>Admin</h1>
       <nav class="admin-nav">
-        <a href="#" class="active">Homepage Content</a>
+        <a href="#hero" class="active">Homepage Content</a>
+        <a href="#media">Media & Videos</a>
+        <a href="#footer">Contact Details</a>
         <a href="index.html" class="logout" id="logout-btn">Log out &rarr;</a>
       </nav>
     </aside>
@@ -190,7 +193,7 @@
         <button class="btn-save" id="save-btn">Save Changes</button>
       </header>
 
-      <div class="admin-card">
+      <div class="admin-card" id="hero">
         <h3>Hero Section</h3>
         <div class="form-group">
           <label for="hero-title">Main Title</label>
@@ -200,43 +203,96 @@
           <label for="hero-subtitle">Subtitle / Intro text</label>
           <textarea id="hero-subtitle">Legal strategy and advocacy grounded in rigorous analysis, institutional experience, and a commitment to principle.</textarea>
         </div>
+        <div class="form-group">
+          <label for="hero-portrait">Portrait Image URL</label>
+          <input type="text" id="hero-portrait" value="assets/images/portrait-800.jpg" />
+        </div>
       </div>
 
-      <div class="admin-card">
+      <div class="admin-card" id="media">
+        <h3>Media & Videos</h3>
+        <div class="form-group">
+          <label for="featured-video">Featured Video (.mp4 URL)</label>
+          <input type="text" id="featured-video" value="assets/videos/featured-video.mp4" />
+        </div>
+        <div class="form-group">
+          <label for="featured-video-poster">Featured Video Poster Image URL</label>
+          <input type="text" id="featured-video-poster" value="assets/videos/featured-video-poster.jpg" />
+        </div>
+        <div class="form-group">
+          <label for="video-1">Video 1 (.mp4 URL)</label>
+          <input type="text" id="video-1" value="assets/videos/interviews/interview-01.mp4" />
+        </div>
+      </div>
+
+      <div class="admin-card" id="footer">
         <h3>Contact Details (Footer)</h3>
         <div class="form-group">
           <label for="contact-email">Email Address</label>
           <input type="email" id="contact-email" value="wicky.mechanier1446@gmail.com" />
+        </div>
+        <div class="form-group">
+          <label for="contact-phone">Phone Number</label>
+          <input type="text" id="contact-phone" value="+92 313 7277355" />
         </div>
       </div>
     </main>
 
     <div class="toast" id="toast">✅ Changes saved successfully!</div>
 
+    <script src="supabase-config.js"></script>
     <script>
-      // Populate fields from localStorage if they exist
-      document.addEventListener("DOMContentLoaded", () => {
-        const siteData = JSON.parse(localStorage.getItem('qav_site_data') || '{}');
+      // Populate fields from Supabase
+      document.addEventListener("DOMContentLoaded", async () => {
+        document.getElementById('save-btn').textContent = "Loading...";
+        const siteData = await getSiteData() || JSON.parse(localStorage.getItem('qav_site_data') || '{}');
+        document.getElementById('save-btn').textContent = "Save Changes";
         
         if (siteData.heroTitle) document.getElementById('hero-title').value = siteData.heroTitle;
         if (siteData.heroSubtitle) document.getElementById('hero-subtitle').value = siteData.heroSubtitle;
+        if (siteData.heroPortrait) document.getElementById('hero-portrait').value = siteData.heroPortrait;
+        
+        if (siteData.featuredVideo) document.getElementById('featured-video').value = siteData.featuredVideo;
+        if (siteData.featuredVideoPoster) document.getElementById('featured-video-poster').value = siteData.featuredVideoPoster;
+        if (siteData.video1) document.getElementById('video-1').value = siteData.video1;
+        
         if (siteData.contactEmail) document.getElementById('contact-email').value = siteData.contactEmail;
+        if (siteData.contactPhone) document.getElementById('contact-phone').value = siteData.contactPhone;
       });
 
       // Save changes
-      document.getElementById('save-btn').addEventListener('click', () => {
+      document.getElementById('save-btn').addEventListener('click', async () => {
+        const btn = document.getElementById('save-btn');
+        btn.textContent = "Saving...";
+        btn.disabled = true;
+
         const siteData = {
           heroTitle: document.getElementById('hero-title').value,
           heroSubtitle: document.getElementById('hero-subtitle').value,
+          heroPortrait: document.getElementById('hero-portrait').value,
+          
+          featuredVideo: document.getElementById('featured-video').value,
+          featuredVideoPoster: document.getElementById('featured-video-poster').value,
+          video1: document.getElementById('video-1').value,
+
           contactEmail: document.getElementById('contact-email').value,
+          contactPhone: document.getElementById('contact-phone').value,
         };
         
+        // Save to localStorage as backup
         localStorage.setItem('qav_site_data', JSON.stringify(siteData));
         
-        // Show toast
-        const toast = document.getElementById('toast');
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 3000);
+        // Save to Supabase
+        const success = await saveSiteData(siteData);
+        
+        btn.textContent = "Save Changes";
+        btn.disabled = false;
+
+        if (success) {
+          const toast = document.getElementById('toast');
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 3000);
+        }
       });
 
       // Logout

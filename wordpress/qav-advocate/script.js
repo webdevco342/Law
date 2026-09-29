@@ -327,20 +327,50 @@
     });
 
   // Apply dynamic content from custom admin panel
-  document.addEventListener("DOMContentLoaded", () => {
-    const siteData = JSON.parse(localStorage.getItem('qav_site_data') || '{}');
+  document.addEventListener("DOMContentLoaded", async () => {
+    let siteData = JSON.parse(localStorage.getItem('qav_site_data') || '{}');
+    
+    // Fetch from Supabase
+    try {
+      const SUPABASE_URL = "https://houfjfcyziitahrnzndz.supabase.co";
+      const SUPABASE_KEY = "sb_publishable_1oogWbSmb7z4Bh7-ZKVhFQ_NSllOUx2"; // <-- Replaced manually by user
+      if (SUPABASE_KEY !== "PASTE_YOUR_ANON_KEY_HERE") {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/site_settings?id=eq.1&select=content`, {
+          headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` }
+        });
+        const data = await res.json();
+        if (data && data[0]?.content) {
+          siteData = data[0].content;
+          localStorage.setItem('qav_site_data', JSON.stringify(siteData));
+        }
+      }
+    } catch (e) {
+      console.error("Could not load from Supabase", e);
+    }
     
     // Check if we are on the homepage to apply hero changes
     const heroTitle = document.querySelector('.hero-copy h1');
     const heroSubtitle = document.querySelector('.hero-copy > p');
+    const heroPortraitImg = document.querySelector('.client-portrait img');
     
-    if (heroTitle && siteData.heroTitle) {
-      heroTitle.textContent = siteData.heroTitle;
-    }
-    if (heroSubtitle && siteData.heroSubtitle) {
-      heroSubtitle.textContent = siteData.heroSubtitle;
+    if (heroTitle && siteData.heroTitle) heroTitle.textContent = siteData.heroTitle;
+    if (heroSubtitle && siteData.heroSubtitle) heroSubtitle.textContent = siteData.heroSubtitle;
+    if (heroPortraitImg && siteData.heroPortrait) {
+      heroPortraitImg.src = siteData.heroPortrait;
+      heroPortraitImg.srcset = siteData.heroPortrait; // Override responsive srcset
     }
     
+    // Apply video changes in media pages
+    const featuredVideo = document.querySelector('video[aria-label="Featured Video"]');
+    if (featuredVideo && (siteData.featuredVideo || siteData.featuredVideoPoster)) {
+      if (siteData.featuredVideoPoster) featuredVideo.poster = siteData.featuredVideoPoster;
+      const source = featuredVideo.querySelector('source');
+      if (source && siteData.featuredVideo) {
+        source.src = siteData.featuredVideo;
+        featuredVideo.load();
+      }
+    }
+
     // Update contact emails in footer
     const contactEmails = document.querySelectorAll('a.email-address');
     if (contactEmails.length && siteData.contactEmail) {
