@@ -57,3 +57,35 @@ async function saveSiteData(content) {
     return false;
   }
 }
+
+async function uploadFileToSupabase(file) {
+  if (SUPABASE_KEY === "PASTE_YOUR_ANON_KEY_HERE") {
+    alert("Supabase key missing!");
+    return null;
+  }
+  
+  const fileName = `${Date.now()}_${file.name.replace(/[^a-zA-Z0-9.\-_]/g, '')}`;
+  try {
+    const res = await fetch(`${SUPABASE_URL}/storage/v1/object/media/${fileName}`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY,
+        'Authorization': `Bearer ${SUPABASE_KEY}`,
+        'Content-Type': file.type
+      },
+      body: file
+    });
+    
+    if (res.ok) {
+      return `${SUPABASE_URL}/storage/v1/object/public/media/${fileName}`;
+    } else {
+      const errorText = await res.text();
+      console.error("Upload failed:", errorText);
+      alert("Upload failed! Make sure you created a public bucket named 'media'.");
+      return null;
+    }
+  } catch (error) {
+    console.error("Error uploading to Supabase:", error);
+    return null;
+  }
+}

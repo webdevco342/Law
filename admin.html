@@ -145,9 +145,33 @@
       }
       .form-group input:focus, .form-group textarea:focus {
         outline: none;
-        border-color: var(--admin-accent);
-        box-shadow: 0 0 0 3px rgba(198, 162, 67, 0.2);
+        border-color: var(--admin-accent) !important;
+        box-shadow: 0 0 0 3px rgba(198, 162, 67, 0.2) !important;
       }
+      
+      .upload-wrapper {
+        display: flex;
+        gap: 10px;
+        margin-top: 8px;
+      }
+      .upload-wrapper input[type="text"] {
+        flex: 1;
+        margin-top: 0;
+      }
+      .btn-upload {
+        background-color: var(--admin-primary);
+        color: var(--ivory);
+        border: none;
+        padding: 0 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: var(--font-body);
+        font-weight: 500;
+        transition: opacity 0.2s;
+      }
+      .btn-upload:hover { opacity: 0.9; }
+      .btn-upload:disabled { opacity: 0.5; cursor: not-allowed; }
+      .file-input-hidden { display: none; }
       .toast {
         position: fixed;
         bottom: 30px;
@@ -211,17 +235,41 @@
 
       <div class="admin-card" id="media">
         <h3>Media & Videos</h3>
+        
         <div class="form-group">
-          <label for="featured-video">Featured Video (.mp4 URL)</label>
-          <input type="text" id="featured-video" value="assets/videos/featured-video.mp4" />
+          <label>Featured Video (.mp4)</label>
+          <div class="upload-wrapper">
+            <input type="text" id="featured-video" placeholder="Video URL" />
+            <input type="file" id="file-featured-video" accept="video/mp4" class="file-input-hidden" />
+            <button class="btn-upload" onclick="document.getElementById('file-featured-video').click()">Upload Video</button>
+          </div>
         </div>
         <div class="form-group">
-          <label for="featured-video-poster">Featured Video Poster Image URL</label>
-          <input type="text" id="featured-video-poster" value="assets/videos/featured-video-poster.jpg" />
+          <label>Featured Video Poster (.jpg)</label>
+          <div class="upload-wrapper">
+            <input type="text" id="featured-video-poster" placeholder="Image URL" />
+            <input type="file" id="file-featured-video-poster" accept="image/*" class="file-input-hidden" />
+            <button class="btn-upload" onclick="document.getElementById('file-featured-video-poster').click()">Upload Image</button>
+          </div>
+        </div>
+
+        <hr style="border:0; border-top:1px solid var(--admin-border); margin: 30px 0;">
+
+        <div class="form-group">
+          <label>Interview 1 (.mp4)</label>
+          <div class="upload-wrapper">
+            <input type="text" id="video-1" placeholder="Video URL" />
+            <input type="file" id="file-video-1" accept="video/mp4" class="file-input-hidden" />
+            <button class="btn-upload" onclick="document.getElementById('file-video-1').click()">Upload Video</button>
+          </div>
         </div>
         <div class="form-group">
-          <label for="video-1">Video 1 (.mp4 URL)</label>
-          <input type="text" id="video-1" value="assets/videos/interviews/interview-01.mp4" />
+          <label>Interview 1 Poster (.jpg)</label>
+          <div class="upload-wrapper">
+            <input type="text" id="video-1-poster" placeholder="Image URL" />
+            <input type="file" id="file-video-1-poster" accept="image/*" class="file-input-hidden" />
+            <button class="btn-upload" onclick="document.getElementById('file-video-1-poster').click()">Upload Image</button>
+          </div>
         </div>
       </div>
 
@@ -255,9 +303,39 @@
         if (siteData.featuredVideo) document.getElementById('featured-video').value = siteData.featuredVideo;
         if (siteData.featuredVideoPoster) document.getElementById('featured-video-poster').value = siteData.featuredVideoPoster;
         if (siteData.video1) document.getElementById('video-1').value = siteData.video1;
+        if (siteData.video1Poster) document.getElementById('video-1-poster').value = siteData.video1Poster;
         
         if (siteData.contactEmail) document.getElementById('contact-email').value = siteData.contactEmail;
         if (siteData.contactPhone) document.getElementById('contact-phone').value = siteData.contactPhone;
+      });
+
+      // Handle file uploads automatically
+      document.querySelectorAll('.file-input-hidden').forEach(input => {
+        input.addEventListener('change', async (e) => {
+          const file = e.target.files[0];
+          if (!file) return;
+          
+          const btn = e.target.nextElementSibling;
+          const textInput = e.target.previousElementSibling;
+          
+          const originalText = btn.textContent;
+          btn.textContent = "Uploading...";
+          btn.disabled = true;
+          
+          const url = await uploadFileToSupabase(file);
+          
+          if (url) {
+            textInput.value = url;
+            btn.textContent = "Uploaded!";
+            setTimeout(() => { btn.textContent = originalText; btn.disabled = false; }, 2000);
+          } else {
+            btn.textContent = "Failed";
+            setTimeout(() => { btn.textContent = originalText; btn.disabled = false; }, 3000);
+          }
+          
+          // Clear the file input so they can select the same file again if needed
+          e.target.value = '';
+        });
       });
 
       // Save changes
@@ -274,6 +352,7 @@
           featuredVideo: document.getElementById('featured-video').value,
           featuredVideoPoster: document.getElementById('featured-video-poster').value,
           video1: document.getElementById('video-1').value,
+          video1Poster: document.getElementById('video-1-poster').value,
 
           contactEmail: document.getElementById('contact-email').value,
           contactPhone: document.getElementById('contact-phone').value,

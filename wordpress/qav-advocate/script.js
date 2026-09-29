@@ -358,6 +358,12 @@
     if (heroPortraitImg && siteData.heroPortrait) {
       heroPortraitImg.src = siteData.heroPortrait;
       heroPortraitImg.srcset = siteData.heroPortrait; // Override responsive srcset
+      
+      // Remove the <source> tags from the <picture> element so they don't override the <img>
+      const picture = heroPortraitImg.closest('picture');
+      if (picture) {
+        picture.querySelectorAll('source').forEach(src => src.remove());
+      }
     }
     
     // Apply video changes in media pages
@@ -368,6 +374,16 @@
       if (source && siteData.featuredVideo) {
         source.src = siteData.featuredVideo;
         featuredVideo.load();
+      }
+    }
+
+    const interview1 = document.querySelector('video[aria-label="Featured Interview"]');
+    if (interview1 && (siteData.video1 || siteData.video1Poster)) {
+      if (siteData.video1Poster) interview1.poster = siteData.video1Poster;
+      const source = interview1.querySelector('source');
+      if (source && siteData.video1) {
+        source.src = siteData.video1;
+        interview1.load();
       }
     }
 
