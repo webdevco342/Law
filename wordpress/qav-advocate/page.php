@@ -1,0 +1,1 @@
+<?php get_header();while(have_posts()):the_post();?><main id="main" class="article-main" tabindex="-1"><header class="article-header"><h1><?php the_title();?></h1></header><div class="article-body"><?php the_content();?></div></main><?php endwhile;get_footer(); ?>
