@@ -1,175 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#061a2f" />
-    <title>
-      Qurat-ul-Ain Viirk | Advocate High Court Lahore | Legal Advocacy &amp; Advisory
-    </title>
-    <meta
-      name="description"
-      content="Qurat-ul-Ain Viirk is an Advocate High Court in Lahore with 18+ years of legal experience across civil, criminal, banking, corporate, property and regulatory matters, alongside human rights and women's rights advocacy."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_PK" />
-    <meta property="og:title" content="Qurat-ul-Ain Viirk — Advocate High Court" />
-    <meta
-      property="og:description"
-      content="Experienced legal advocacy and advisory in Lahore. Courtroom practice, institutional counsel and a commitment to human rights and women's rights."
-    />
-    <link rel="icon" type="image/svg+xml" href="assets/svg/favicon.svg" />
-    <link
-      rel="preload"
-      href="assets/fonts/cormorant-garamond-medium.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="assets/fonts/manrope-variable.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="upgrade.css" />
-    <link rel="stylesheet" href="home-insights-media.css" />
-    <script src="script.js" defer></script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Qurat-ul-Ain Viirk",
-        "jobTitle": "Advocate High Court",
-        "telephone": ["+92 313 7277355", "+92 303 5980803"],
-        "email": "wicky.mechanier1446@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "4B One Lahore, Qurban Police Lines, Jail Road",
-          "addressLocality": "Lahore",
-          "addressCountry": "PK"
-        },
-        "knowsLanguage": ["Urdu", "English", "Punjabi"]
-      }
-    </script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <svg
-      class="icon-defs"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <defs>
-        <symbol id="icon-arrow" viewBox="0 0 24 24">
-          <path d="M4 12h15m-6-6 6 6-6 6" />
-        </symbol>
-        <symbol id="icon-arrow-up" viewBox="0 0 24 24">
-          <path d="M6 18 18 6M6 6h12v12" />
-        </symbol>
-        <symbol id="icon-columns" viewBox="0 0 32 32">
-          <path
-            d="m3 10 13-7 13 7H3Zm2 18h22M3 31h26M7 13v12m6-12v12m6-12v12m6-12v12"
-          />
-        </symbol>
-        <symbol id="icon-scales" viewBox="0 0 32 32">
-          <path
-            d="M16 4v24M9 28h14M5 10h22M6 10l-4 10h8L6 10Zm20 0-4 10h8l-4-10ZM2 20c0 5 8 5 8 0m12 0c0 5 8 5 8 0"
-          />
-          <circle cx="16" cy="6" r="2" />
-        </symbol>
-        <symbol id="icon-document" viewBox="0 0 32 32">
-          <path d="M7 3h12l6 6v20H7V3Zm12 0v7h6M11 15h10m-10 5h10m-10 5h6" />
-        </symbol>
-        <symbol id="icon-shield" viewBox="0 0 32 32">
-          <path d="m16 3 11 4v9c0 7-11 13-11 13S5 23 5 16V7l11-4Z" />
-          <path d="m11 15 4 4 7-8" />
-        </symbol>
-        <symbol id="icon-building" viewBox="0 0 32 32">
-          <path
-            d="M4 29h24M7 29V9h9V3h9v26M11 13h1m-1 5h1m-1 5h1m8-14h1m-1 5h1m-1 5h1m-1 5h1"
-          />
-        </symbol>
-        <symbol id="icon-people" viewBox="0 0 32 32">
-          <circle cx="12" cy="10" r="5" />
-          <path
-            d="M3 28v-4a9 9 0 0 1 18 0v4M22 6a5 5 0 0 1 0 10m3 3a7 7 0 0 1 4 6v3"
-          />
-        </symbol>
-        <symbol id="icon-book" viewBox="0 0 32 32">
-          <path
-            d="M16 7v22M3 5c5-1 9 0 13 3 4-3 8-4 13-3v21c-5-1-9 0-13 3-4-3-8-4-13-3V5Z"
-          />
-        </symbol>
-        <symbol id="icon-pen" viewBox="0 0 32 32">
-          <path
-            d="m8 24 3-9L24 2l6 6-13 13-9 3Zm3-9 6 6M21 5l6 6M3 30h26M8 24l-3 3"
-          />
-        </symbol>
-        <symbol id="icon-pin" viewBox="0 0 24 24">
-          <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" />
-          <circle cx="12" cy="10" r="2.5" />
-        </symbol>
-        <symbol id="icon-phone" viewBox="0 0 24 24">
-          <path
-            d="m5 3 4 1 1 5-3 2c2 3 3 4 6 6l2-3 5 1 1 4c-1 3-5 3-10-1S2 7 3 5l2-2Z"
-          />
-        </symbol>
-        <symbol id="icon-mail" viewBox="0 0 24 24">
-          <rect x="3" y="5" width="18" height="14" rx="1" />
-          <path d="m3 6 9 7 9-7" />
-        </symbol>
-      </defs>
-    </svg>
-
-    <header class="site-header" id="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#home" aria-label="Qurat-ul-Ain Viirk, home"
-          ><span class="brand-mark" aria-hidden="true">Q<span>.</span></span
-          ><span class="brand-type"
-            >QURAT-UL-AIN VIIRK<small>ADVOCATE HIGH COURT</small></span
-          ></a
-        >
-        <nav class="desktop-nav" aria-label="Main navigation"><a href="#about">Profile</a><a href="#practice">Practice</a><a href="#experience">Experience</a><a href="#advocacy">Advocacy</a><a href="insights-media.html">Insights &amp; Media</a><a href="#contact">Contact</a></nav>
-        <a class="button button-gold header-cta" href="#contact"
-          >Request Consultation<svg class="icon">
-            <use href="#icon-arrow-up" /></svg
-        ></a>
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-label="Open navigation"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <span>Menu</span><span class="menu-lines" aria-hidden="true"></span>
-        </button>
-      </div>
-      <div class="scroll-progress" aria-hidden="true"></div>
-    </header>
-    <dialog class="mobile-menu" id="mobile-menu" aria-label="Navigation">
-      <div class="mobile-menu-top">
-        <span class="eyebrow">QURAT-UL-AIN VIIRK</span
-        ><button class="menu-close" type="button" aria-label="Close navigation">
-          Close <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <nav aria-label="Mobile navigation">
-        <a href="#home">Home</a><a href="#about">About</a
-        ><a href="#practice">Practice Areas</a
-        ><a href="#experience">Experience</a><a href="#advocacy">Advocacy</a
-        ><a href="#credentials">Credentials</a><a href="insights-media.html">Insights &amp; Media</a><a href="insights.html">Insights</a><a href="media.html">Media &amp; Interviews</a><a href="#contact">Contact</a>
-      </nav>
-      <a class="button button-gold" href="#contact"
-        >Request a Consultation<svg class="icon">
-          <use href="#icon-arrow-up" /></svg
-      ></a>
-      <p class="mobile-menu-location">Lahore, Pakistan · Advocate High Court</p>
-    </dialog>
-
-    <main id="main" tabindex="-1">
+<?php get_header(); ?><main id="main" tabindex="-1">
       <section class="hero dark" id="home" aria-labelledby="hero-title">
         <div class="container hero-grid">
           <div class="hero-copy">
@@ -189,10 +18,10 @@
               matters that shape lives and institutions.
             </p>
             <div class="hero-actions hero-enter">
-              <a class="button button-gold" href="#contact"
+              <a class="button button-gold" href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
                 >Request a Consultation<svg class="icon">
                   <use href="#icon-arrow-up" /></svg></a
-              ><a class="text-link light-link" href="#practice"
+              ><a class="text-link light-link" href="<?php echo esc_url(qav_home_anchor('practice')); ?>"
                 >Explore Practice Areas<svg class="icon">
                   <use href="#icon-arrow" /></svg
               ></a>
@@ -205,11 +34,7 @@
           <figure class="hero-visual hero-enter">
             <div class="visual-frame">
               <!-- Supplied client portrait; original facial detail preserved. -->
-              <picture class="client-portrait">
-                <source type="image/avif" srcset="assets/images/portrait-480.avif 480w, assets/images/portrait-800.avif 800w, assets/images/portrait-1186.avif 1186w" sizes="(max-width: 700px) 90vw, (max-width: 1100px) 40vw, 440px">
-                <source type="image/webp" srcset="assets/images/portrait-480.webp 480w, assets/images/portrait-800.webp 800w, assets/images/portrait-1186.webp 1186w" sizes="(max-width: 700px) 90vw, (max-width: 1100px) 40vw, 440px">
-                <img src="assets/images/portrait-800.jpg" srcset="assets/images/portrait-480.jpg 480w, assets/images/portrait-800.jpg 800w, assets/images/portrait-1186.jpg 1186w" sizes="(max-width: 700px) 90vw, (max-width: 1100px) 40vw, 440px" width="1186" height="1582" alt="Qurat-ul-Ain Viirk, Advocate High Court" fetchpriority="high" decoding="async">
-              </picture>
+              <?php qav_portrait(true); ?>
               <div class="profile-caption">
                 <span class="caption-rule"></span>
                 <h2>Qurat-ul-Ain Viirk</h2>
@@ -228,7 +53,7 @@
         </div>
         <div class="container hero-bottom">
           <span>LEGAL ADVOCACY <i>·</i> ADVISORY <i>·</i> HUMAN RIGHTS</span
-          ><a href="#about"
+          ><a href="<?php echo esc_url(qav_home_anchor('about')); ?>"
             >DISCOVER THE PRACTICE <span aria-hidden="true">↓</span></a
           >
         </div>
@@ -271,7 +96,7 @@
               <h2 id="about-title">
                 A considered approach.<br /><em>A committed advocate.</em>
               </h2>
-              <a class="text-link" href="#experience"
+              <a class="text-link" href="<?php echo esc_url(qav_home_anchor('experience')); ?>"
                 >Explore the Professional Journey<svg class="icon">
                   <use href="#icon-arrow" /></svg
               ></a>
@@ -325,7 +150,7 @@
           <div class="practice-grid">
             <a
               class="practice-card"
-              href="#contact"
+              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
               data-matter="Civil Matter"
               data-reveal
               ><div class="card-top">
@@ -343,7 +168,7 @@
             ></a>
             <a
               class="practice-card"
-              href="#contact"
+              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
               data-matter="Criminal Matter"
               data-reveal
               ><div class="card-top">
@@ -361,7 +186,7 @@
             ></a>
             <a
               class="practice-card"
-              href="#contact"
+              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
               data-matter="Corporate / Contract Matter"
               data-reveal
               ><div class="card-top">
@@ -379,7 +204,7 @@
             ></a>
             <a
               class="practice-card"
-              href="#contact"
+              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
               data-matter="Banking Matter"
               data-reveal
               ><div class="card-top">
@@ -397,7 +222,7 @@
             ></a>
             <a
               class="practice-card"
-              href="#contact"
+              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
               data-matter="Property / LDA Matter"
               data-reveal
               ><div class="card-top">
@@ -415,7 +240,7 @@
             ></a>
             <a
               class="practice-card"
-              href="#contact"
+              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
               data-matter="Workplace / Anti-Harassment"
               data-reveal
               ><div class="card-top">
@@ -433,7 +258,7 @@
             ></a>
             <a
               class="practice-card"
-              href="#contact"
+              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
               data-matter="Women's Rights / GBV"
               data-reveal
               ><div class="card-top">
@@ -451,7 +276,7 @@
             ></a>
             <a
               class="practice-card"
-              href="#contact"
+              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
               data-matter="Other"
               data-reveal
               ><div class="card-top">
@@ -469,7 +294,7 @@
             ></a>
             <a
               class="practice-card"
-              href="#contact"
+              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
               data-matter="Arbitration &amp; Dispute Resolution"
               data-reveal
               ><div class="card-top">
@@ -489,11 +314,11 @@
           </div>
           <p class="practice-note">
             Every legal matter begins with understanding its context.<a
-              href="#contact"
+              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
               >Start a conversation <span aria-hidden="true">↗</span></a
             >
           </p>
-        </div>
+        <?php qav_practice_insights(); ?></div>
       </section>
 
       <section
@@ -743,7 +568,7 @@
                 to each matter’s procedural progress.
               </p>
               <img
-                src="assets/svg/legal-study.svg"
+                src="<?php echo esc_url(qav_asset('assets/svg/legal-study.svg')); ?>"
                 alt="Editorial illustration of an open volume resting on bound legal books"
                 width="800"
                 height="520"
@@ -969,8 +794,8 @@
                   <svg class="icon"><use href="#icon-phone" /></svg>
                   <div>
                     <span class="contact-label">CALL THE OFFICE</span
-                    ><a href="tel:+923137277355">+92 313 7277355</a
-                    ><a href="tel:+923035980803">+92 303 5980803</a>
+                    ><a href="<?php echo esc_url(qav_tel('phone')); ?>"><?php echo esc_html(qav_profile('phone')); ?></a
+                    ><a href="<?php echo esc_url(qav_tel('phone_secondary')); ?>"><?php echo esc_html(qav_profile('phone_secondary')); ?></a>
                   </div>
                 </div>
                 <div>
@@ -979,8 +804,8 @@
                     <span class="contact-label">EMAIL</span
                     ><a
                       class="email-address"
-                      href="mailto:wicky.mechanier1446@gmail.com"
-                      >wicky.mechanier1446@gmail.com</a
+                      href="mailto:<?php echo esc_attr(qav_profile('email')); ?>"
+                      ><?php echo esc_attr(qav_profile('email')); ?></a
                     >
                   </div>
                 </div>
@@ -989,7 +814,7 @@
                   <div>
                     <span class="contact-label">OFFICE ADDRESS</span>
                     <p>
-                      4B One Lahore, Qurban Police Lines,<br />Jail Road, Lahore
+                      <?php echo nl2br(esc_html(qav_profile('address'))); ?>
                     </p>
                   </div>
                 </div>
@@ -998,7 +823,7 @@
                 >Urdu <i>·</i> English <i>·</i> Punjabi</span
               >
             </div>
-            <form class="enquiry-form" id="enquiry-form" data-contact-email="wicky.mechanier1446@gmail.com" novalidate data-reveal>
+            <form class="enquiry-form" id="enquiry-form" data-contact-email="<?php echo esc_attr(qav_profile('email')); ?>" novalidate data-reveal>
               <h3>Request a consultation</h3>
               <p class="form-intro" id="form-intro">
                 Share a brief overview. You can review your enquiry in your
@@ -1123,7 +948,7 @@
                 <a
                   class="button button-outline"
                   id="email-draft"
-                  href="mailto:wicky.mechanier1446@gmail.com"
+                  href="mailto:<?php echo esc_attr(qav_profile('email')); ?>"
                   >Open Email Draft<svg class="icon">
                     <use href="#icon-arrow-up" /></svg></a
                 ><button type="button" class="copy-enquiry" id="copy-enquiry">
@@ -1139,10 +964,10 @@
                 </style>
                 <p class="form-note">
                   This form needs JavaScript to prepare an enquiry. Please
-                  <a href="mailto:wicky.mechanier1446@gmail.com"
+                  <a href="mailto:<?php echo esc_attr(qav_profile('email')); ?>"
                     >email the office directly</a
                   >
-                  or call +92 313 7277355.
+                  or call <?php echo esc_html(qav_profile('phone')); ?>.
                 </p></noscript
               >
             </form>
@@ -1151,92 +976,4 @@
       </section>
     </main>
 
-    <footer class="site-footer dark">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-about">
-            <a class="brand" href="#home"
-              ><span class="brand-mark" aria-hidden="true">Q<span>.</span></span
-              ><span class="brand-type"
-                >QURAT-UL-AIN VIIRK<small>ADVOCATE HIGH COURT</small></span
-              ></a
-            >
-            <p>
-              Legal advocacy, institutional advisory and rights-focused
-              practice.<br />Lahore, Pakistan.
-            </p>
-          </div>
-          <div>
-            <h2 class="eyebrow">EXPLORE</h2>
-            <nav aria-label="Footer navigation">
-              <a href="#home">Home</a><a href="#about">About</a
-              ><a href="#experience">Experience</a
-              ><a href="#advocacy">Advocacy</a
-              ><a href="#credentials">Credentials</a
-              ><a href="#contact">Contact</a>
-            </nav>
-          </div>
-          <div>
-            <h2 class="eyebrow">THE PRACTICE</h2>
-            <nav aria-label="Practice navigation">
-              <a href="#contact" data-matter="Civil Matter">Civil Litigation</a
-              ><a href="#contact" data-matter="Criminal Matter"
-                >Criminal Litigation</a
-              ><a href="#contact" data-matter="Corporate / Contract Matter"
-                >Corporate Advisory</a
-              ><a href="#contact" data-matter="Banking Matter">Banking Law</a
-              ><a href="#contact" data-matter="Property / LDA Matter"
-                >Property &amp; LDA Matters</a
-              ><a href="#advocacy">Anti-Harassment &amp; Women’s Rights</a>
-            </nav>
-          </div>
-          <div class="footer-contact">
-            <h2 class="eyebrow">GET IN TOUCH</h2>
-            <address>
-              4B One Lahore, Qurban Police Lines,<br />Jail Road, Lahore
-            </address>
-            <a href="tel:+923137277355">+92 313 7277355</a
-            ><a href="tel:+923035980803">+92 303 5980803</a
-            ><a
-              class="email-address"
-              href="mailto:wicky.mechanier1446@gmail.com"
-              >wicky.mechanier1446@gmail.com</a
-            >
-          </div>
-        </div>
-        <div class="footer-signature" aria-hidden="true">
-          QURAT-UL-AIN VIIRK<span>ADVOCATE HIGH COURT</span>
-        </div>
-        <p class="legal-disclaimer" id="disclaimer">
-          The information provided on this website is for general informational
-          purposes only and should not be treated as legal advice. Visiting this
-          website or submitting an enquiry does not by itself establish a
-          lawyer-client relationship.
-        </p>
-        <div class="footer-bottom">
-          <span
-            ><span id="admin-login-trigger" style="cursor:pointer;" title="Admin Login">©</span> <span id="copyright-year">2026</span> Qurat-ul-Ain Viirk. All rights
-            reserved.</span
-          >
-          <div>
-            <a href="insights.html">Insights</a><a href="media.html">Media</a><a href="privacy.html">Privacy Notice</a
-            ><a href="#disclaimer">Legal Disclaimer</a
-            ><a href="#home" class="back-top">Back to top ↑</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Admin Login Modal -->
-      <div id="admin-login-modal" class="admin-modal">
-        <div class="admin-modal-content">
-          <span class="admin-close">&times;</span>
-          <h2>Admin Access</h2>
-          <p>Please enter the password to access the dashboard.</p>
-          <input type="password" id="admin-password" placeholder="Password" />
-          <button id="admin-submit">Login</button>
-          <p id="admin-error" class="admin-error-msg">Incorrect password.</p>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+    <?php get_footer(); ?>

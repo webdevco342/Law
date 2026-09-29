@@ -78,8 +78,21 @@
           Qurat-ul-Ain Viirk · Advocate High Court · Lahore, Pakistan
         </p>
         <div class="footer-bottom">
-          <span>© 2026 Qurat-ul-Ain Viirk. All rights reserved.</span
+          <span
+            ><span id="admin-login-trigger" style="cursor:pointer;" title="Admin Login">©</span> 2026 Qurat-ul-Ain Viirk. All rights reserved.</span
           ><a href="index.html">Return to the website ↑</a>
+        </div>
+      </div>
+
+      <!-- Admin Login Modal -->
+      <div id="admin-login-modal" class="admin-modal">
+        <div class="admin-modal-content">
+          <span class="admin-close">&times;</span>
+          <h2>Admin Access</h2>
+          <p>Please enter the password to access the dashboard.</p>
+          <input type="password" id="admin-password" placeholder="Password" />
+          <button id="admin-submit">Login</button>
+          <p id="admin-error" class="admin-error-msg">Incorrect password.</p>
         </div>
       </div>
     </footer>

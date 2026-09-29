@@ -3360,3 +3360,101 @@ textarea[aria-invalid="true"] {
     display: none;
   }
 }
+
+/* Admin Login Modal */
+.admin-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-modal.show {
+  display: flex;
+}
+
+.admin-modal-content {
+  background: var(--surface);
+  color: var(--text);
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.admin-modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: var(--font-serif);
+  font-size: 28px;
+}
+
+.admin-modal-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.admin-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-muted);
+  line-height: 1;
+}
+
+.admin-close:hover {
+  color: var(--text);
+}
+
+#admin-password {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  border-radius: 4px;
+  font-family: var(--font-sans);
+}
+
+#admin-password:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+#admin-submit {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  transition: background 0.2s;
+}
+
+#admin-submit:hover {
+  background: #a98050; /* slightly darker gold based on primary */
+}
+
+.admin-error-msg {
+  color: #ff6b6b !important;
+  display: none;
+  margin-top: 10px;
+  margin-bottom: 0 !important;
+}

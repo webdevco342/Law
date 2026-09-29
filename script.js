@@ -325,4 +325,47 @@
         );
       }
     });
+
+  // Admin Panel Access Logic
+  const adminTrigger = document.getElementById("admin-login-trigger");
+  const adminModal = document.getElementById("admin-login-modal");
+  if (adminTrigger && adminModal) {
+    const adminClose = adminModal.querySelector(".admin-close");
+    const adminSubmit = document.getElementById("admin-submit");
+    const adminPasswordInput = document.getElementById("admin-password");
+    const adminErrorMsg = document.getElementById("admin-error");
+
+    const closeModal = () => {
+      adminModal.classList.remove("show");
+      adminPasswordInput.value = "";
+      adminErrorMsg.style.display = "none";
+    };
+
+    adminTrigger.addEventListener("click", () => {
+      adminModal.classList.add("show");
+      adminPasswordInput.focus();
+    });
+
+    adminClose.addEventListener("click", closeModal);
+
+    adminModal.addEventListener("click", (e) => {
+      if (e.target === adminModal) {
+        closeModal();
+      }
+    });
+
+    const attemptLogin = () => {
+      if (adminPasswordInput.value === "admin123") {
+        window.location.href = "/wp-admin";
+      } else {
+        adminErrorMsg.style.display = "block";
+      }
+    };
+
+    adminSubmit.addEventListener("click", attemptLogin);
+    adminPasswordInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") attemptLogin();
+      if (e.key === "Escape") closeModal();
+    });
+  }
 })();

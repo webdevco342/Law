@@ -453,7 +453,7 @@
         </p>
         <div class="footer-bottom">
           <span
-            >© <span id="copyright-year">2026</span> Qurat-ul-Ain Viirk. All rights
+            ><span id="admin-login-trigger" style="cursor:pointer;" title="Admin Login">©</span> <span id="copyright-year">2026</span> Qurat-ul-Ain Viirk. All rights
             reserved.</span
           >
           <div>
@@ -461,6 +461,18 @@
             ><a href="index.html#disclaimer">Legal Disclaimer</a
             ><a href="index.html#home" class="back-top">Back to top ↑</a>
           </div>
+        </div>
+      </div>
+
+      <!-- Admin Login Modal -->
+      <div id="admin-login-modal" class="admin-modal">
+        <div class="admin-modal-content">
+          <span class="admin-close">&times;</span>
+          <h2>Admin Access</h2>
+          <p>Please enter the password to access the dashboard.</p>
+          <input type="password" id="admin-password" placeholder="Password" />
+          <button id="admin-submit">Login</button>
+          <p id="admin-error" class="admin-error-msg">Incorrect password.</p>
         </div>
       </div>
     </footer>
