@@ -326,6 +326,31 @@
       }
     });
 
+  // Apply dynamic content from custom admin panel
+  document.addEventListener("DOMContentLoaded", () => {
+    const siteData = JSON.parse(localStorage.getItem('qav_site_data') || '{}');
+    
+    // Check if we are on the homepage to apply hero changes
+    const heroTitle = document.querySelector('.hero-copy h1');
+    const heroSubtitle = document.querySelector('.hero-copy > p');
+    
+    if (heroTitle && siteData.heroTitle) {
+      heroTitle.textContent = siteData.heroTitle;
+    }
+    if (heroSubtitle && siteData.heroSubtitle) {
+      heroSubtitle.textContent = siteData.heroSubtitle;
+    }
+    
+    // Update contact emails in footer
+    const contactEmails = document.querySelectorAll('a.email-address');
+    if (contactEmails.length && siteData.contactEmail) {
+      contactEmails.forEach(el => {
+        el.href = `mailto:${siteData.contactEmail}`;
+        el.textContent = siteData.contactEmail;
+      });
+    }
+  });
+
   // Admin Panel Access Logic
   const adminTrigger = document.getElementById("admin-login-trigger");
   const adminModal = document.getElementById("admin-login-modal");
@@ -356,7 +381,8 @@
 
     const attemptLogin = () => {
       if (adminPasswordInput.value === "admin123") {
-        window.location.href = "/wp-login.php";
+        sessionStorage.setItem('admin_auth', 'true');
+        window.location.href = "admin.html";
       } else {
         adminErrorMsg.style.display = "block";
       }
