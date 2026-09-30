@@ -6,15 +6,14 @@
   const viewport = gallery.querySelector('.practice-gallery-viewport');
   const slides = [...gallery.querySelectorAll('.practice-gallery-slide')];
   const dots = [...gallery.querySelectorAll('[data-gallery-go]')];
-  const toggle = gallery.querySelector('[data-gallery-toggle]');
   const status = gallery.querySelector('[data-gallery-status]');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const interval = 5500;
+  const interval = 3500;
   let current = 0;
   let requested = 0;
   let timer;
   let generation = 0;
-  let userPaused = motion.matches;
+  let imageLoadFailed = false;
   let hovered = false;
   let focused = false;
   let visible = false;
@@ -22,14 +21,9 @@
   const stop = () => window.clearTimeout(timer);
   const schedule = () => {
     stop();
-    if (!userPaused && !hovered && !focused && visible && !document.hidden && !gesture) {
+    if (!motion.matches && !imageLoadFailed && !hovered && !focused && visible && !document.hidden && !gesture) {
       timer = window.setTimeout(() => show(current + 1, false), interval);
     }
-  };
-  const updateToggle = () => {
-    toggle.classList.toggle('is-paused', userPaused);
-    toggle.setAttribute('aria-label', userPaused ? 'Start automatic image rotation' : 'Pause automatic image rotation');
-    toggle.querySelector('span').textContent = userPaused ? 'Play' : 'Pause';
   };
   const show = async (index, manual = true) => {
     stop();
@@ -44,8 +38,7 @@
       if (request !== generation) return;
       requested = current;
       if (manual) status.textContent = 'This image could not be loaded. Please try another image.';
-      userPaused = true;
-      updateToggle();
+      imageLoadFailed = true;
       return;
     }
     if (request !== generation) return;
@@ -66,12 +59,6 @@
   gallery.querySelector('[data-gallery-prev]').addEventListener('click', () => show(requested - 1));
   gallery.querySelector('[data-gallery-next]').addEventListener('click', () => show(requested + 1));
   dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
-  toggle.addEventListener('click', () => {
-    userPaused = !userPaused;
-    updateToggle();
-    status.textContent = userPaused ? 'Automatic image rotation paused.' : 'Automatic image rotation enabled. Rotation resumes when focus and pointer leave the gallery.';
-    schedule();
-  });
   gallery.addEventListener('keydown', event => {
     if (event.altKey || event.ctrlKey || event.metaKey) return;
     const keys = { ArrowLeft: requested - 1, ArrowRight: requested + 1, Home: 0, End: slides.length - 1 };
@@ -90,10 +77,7 @@
     queueMicrotask(() => { focused = gallery.contains(document.activeElement); schedule(); });
   });
   document.addEventListener('visibilitychange', schedule);
-  motion.addEventListener('change', () => {
-    if (motion.matches) { userPaused = true; updateToggle(); }
-    schedule();
-  });
+  motion.addEventListener('change', schedule);
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; schedule(); }, { threshold: 0.15 });
     observer.observe(viewport);
@@ -117,6 +101,5 @@
   viewport.addEventListener('pointercancel', cancelGesture);
   viewport.addEventListener('lostpointercapture', cancelGesture);
   gallery.querySelector('.practice-gallery-tools').hidden = false;
-  updateToggle();
   schedule();
 })();

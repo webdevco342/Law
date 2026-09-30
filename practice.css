@@ -28,10 +28,6 @@
 .practice-gallery-intro a:focus-visible, .practice-perspective a:focus-visible { outline-color: var(--gold-light); }
 .practice-gallery-dot span { width: 5px; height: 5px; border: 1px solid var(--muted); border-radius: 50%; transition: background-color 200ms ease; }
 .practice-gallery-dot[aria-current="true"] span { background: var(--gold-dark); border-color: var(--gold-dark); box-shadow: 0 0 0 4px var(--ivory), 0 0 0 5px var(--gold-dark); }
-.practice-gallery button.practice-gallery-toggle { gap: 7px; padding-inline: 12px; margin-right: 12px; border-right: 1px solid var(--line); font-family: var(--font-body); font-size: 10px; }
-.practice-gallery-toggle svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.5; }
-.gallery-play-icon, .practice-gallery-toggle.is-paused .gallery-pause-icon { display: none; }
-.practice-gallery-toggle.is-paused .gallery-play-icon { display: initial; }
 .practice-gallery-arrow { font-size: 23px; }
 .practice-index { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; padding-block: 17px; }
 .practice-index a { min-width: 0; gap: 13px; font-size: 11px; }
@@ -141,7 +137,6 @@
   .practice-gallery-counter { gap: 8px; padding-left: 6px; }
   .practice-gallery-dots { grid-row: 2; grid-column: 1 / -1; justify-content: center; }
   .practice-gallery-actions { grid-column: 2; grid-row: 1; }
-  .practice-gallery button.practice-gallery-toggle { margin-right: 2px; padding-inline: 9px; }
   .practice-index { grid-template-columns: minmax(0, 1fr); gap: 0; padding-block: 12px 0; border-bottom: 0; }
   .practice-index a { font-size: 11px; gap: 20px; min-height: 54px; border-bottom: 1px solid var(--line); }
   .practice-index a > span:first-child { font-size: 10px; }
