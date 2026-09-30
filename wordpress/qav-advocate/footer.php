@@ -33,16 +33,32 @@
           </div>
           <div class="footer-contact">
             <h2 class="eyebrow">GET IN TOUCH</h2>
-            <address>
-              <?php echo nl2br(esc_html(qav_profile('address'))); ?>
-            </address>
-            <a href="<?php echo esc_url(qav_tel('phone')); ?>"><?php echo esc_html(qav_profile('phone')); ?></a
-            ><a href="<?php echo esc_url(qav_tel('phone_secondary')); ?>"><?php echo esc_html(qav_profile('phone_secondary')); ?></a
-            ><a
-              class="email-address"
-              href="mailto:<?php echo esc_attr(qav_profile('email')); ?>"
-              ><?php echo esc_attr(qav_profile('email')); ?></a
-            >
+            <div class="footer-contact-stack">
+              <div class="contact-item">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-pin" /></svg>
+                <div><span class="contact-label">OFFICE ADDRESS</span><address><?php echo nl2br(esc_html(qav_profile('address'))); ?></address></div>
+              </div>
+              <div class="contact-item">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-phone" /></svg>
+                <div><span class="contact-label">CALL THE OFFICE</span>
+                  <a href="<?php echo esc_url(qav_tel('phone')); ?>" aria-label="Call the office: <?php echo esc_attr(qav_profile('phone')); ?>"><?php echo esc_html(qav_profile('phone')); ?></a>
+                  <a href="<?php echo esc_url(qav_tel('phone_secondary')); ?>" aria-label="Call the office: <?php echo esc_attr(qav_profile('phone_secondary')); ?>"><?php echo esc_html(qav_profile('phone_secondary')); ?></a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-mail" /></svg>
+                <div><span class="contact-label">EMAIL</span>
+                  <a class="email-address" href="mailto:<?php echo esc_attr(qav_profile('email')); ?>" aria-label="Email the office at <?php echo esc_attr(qav_profile('email')); ?>"><?php echo esc_attr(qav_profile('email')); ?></a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-social">
+              <p class="contact-label">SOCIAL / FOLLOW</p>
+              <div class="contact-social-links">
+                <a href="https://www.instagram.com/qurat_ul_ain_virk?stkn=MXhzZXNoNTVzbmhyeA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r=".75" fill="currentColor" stroke="none" /></svg><span>Instagram</span></a>
+                <a href="https://www.facebook.com/quratulainviirk" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z" /></svg><span>Facebook</span></a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="footer-signature" aria-hidden="true">

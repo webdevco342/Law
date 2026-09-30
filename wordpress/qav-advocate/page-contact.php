@@ -21,26 +21,26 @@ get_header(); ?>
             <p>Every legal matter begins with understanding its context.</p>
             <address class="contact-details">
                 <div>
-                  <svg class="icon"><use href="#icon-phone" /></svg>
+                  <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-phone" /></svg>
                   <div>
                     <span class="contact-label">CALL THE OFFICE</span
-                    ><a href="<?php echo esc_url(qav_tel('phone')); ?>"><?php echo esc_html(qav_profile('phone')); ?></a
-                    ><a href="<?php echo esc_url(qav_tel('phone_secondary')); ?>"><?php echo esc_html(qav_profile('phone_secondary')); ?></a>
+                    ><a href="<?php echo esc_url(qav_tel('phone')); ?>" aria-label="Call the office: <?php echo esc_attr(qav_profile('phone')); ?>"><?php echo esc_html(qav_profile('phone')); ?></a
+                    ><a href="<?php echo esc_url(qav_tel('phone_secondary')); ?>" aria-label="Call the office: <?php echo esc_attr(qav_profile('phone_secondary')); ?>"><?php echo esc_html(qav_profile('phone_secondary')); ?></a>
                   </div>
                 </div>
                 <div>
-                  <svg class="icon"><use href="#icon-mail" /></svg>
+                  <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-mail" /></svg>
                   <div>
                     <span class="contact-label">EMAIL</span
                     ><a
                       class="email-address"
-                      href="mailto:<?php echo esc_attr(qav_profile('email')); ?>"
+                      href="mailto:<?php echo esc_attr(qav_profile('email')); ?>" aria-label="Email the office at <?php echo esc_attr(qav_profile('email')); ?>"
                       ><?php echo esc_attr(qav_profile('email')); ?></a
                     >
                   </div>
                 </div>
                 <div>
-                  <svg class="icon"><use href="#icon-pin" /></svg>
+                  <svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-pin" /></svg>
                   <div>
                     <span class="contact-label">OFFICE ADDRESS</span>
                     <p>
@@ -49,6 +49,13 @@ get_header(); ?>
                   </div>
                 </div>
               </address>
+            <div class="contact-social">
+              <p class="contact-label">SOCIAL / FOLLOW</p>
+              <div class="contact-social-links">
+                <a href="https://www.instagram.com/qurat_ul_ain_virk?stkn=MXhzZXNoNTVzbmhyeA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r=".75" fill="currentColor" stroke="none" /></svg><span>Instagram</span></a>
+                <a href="https://www.facebook.com/quratulainviirk" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z" /></svg><span>Facebook</span></a>
+              </div>
+            </div>
             <dl class="contact-languages"><dt>LANGUAGES</dt><dd><span>Urdu<small>Native</small></span><span>English<small>Professional</small></span><span>Punjabi<small>Fluent</small></span></dd></dl>
           </div>
           <form class="enquiry-form contact-enquiry dark" id="enquiry-form" data-contact-email="<?php echo esc_attr(qav_profile('email')); ?>" novalidate data-reveal>
