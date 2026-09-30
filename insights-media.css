@@ -8,9 +8,13 @@
 .hub-main h1, .hub-main h2, .hub-main h3 { overflow-wrap: break-word; }
 .hub-main .eyebrow { font-size: 10px; }
 .hub-hero { padding: 66px 0 0; }
-.hub-hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 64px; align-items: end; padding-bottom: 42px; }
-.hub-hero .eyebrow { margin-bottom: 21px; }
-.hub-hero-copy { max-width: 390px; color: var(--muted); font-size: 16px; padding-bottom: 4px; }
+.hub-hero-grid { position: relative; isolation: isolate; display: grid; grid-template-columns: 1.35fr 1fr; gap: 64px; align-items: end; padding-bottom: 42px; }
+/* Full-width ink behind the introduction only; the existing tabs stay on ivory. */
+.hub-hero-grid::before { content: ""; position: absolute; z-index: -1; inset: calc(-1 * var(--hub-hero-inset, 66px)) 0 0; background: #080808; box-shadow: 0 0 0 100vmax #080808; clip-path: inset(0 -100vmax); }
+.hub-hero h1 { color: var(--ivory); }
+.hub-hero h1 em { color: var(--gold-light); }
+.hub-hero .eyebrow { margin-bottom: 21px; color: var(--gold-light); }
+.hub-hero-copy { max-width: 390px; color: #d4d0c8; font-size: 16px; padding-bottom: 4px; }
 .hub-index { display: flex; flex-wrap: wrap; gap: 12px 36px; border-block: 1px solid var(--line); padding: 9px 0; }
 .hub-index a { display: inline-flex; align-items: center; min-height: 44px; gap: 12px; font-size: 12px; }
 .hub-index a span { color: var(--gold-dark); font-size: 10px; }
@@ -104,7 +108,7 @@
   .hub-media-empty, .hub-topics-grid { gap: 35px; }
 }
 @media (max-width: 700px) {
-  .hub-hero { padding-top: 40px; }
+  .hub-hero { --hub-hero-inset: 40px; padding-top: 40px; }
   .hub-hero-grid { grid-template-columns: 1fr; gap: 22px; padding-bottom: 27px; }
   .hub-main h1 { font-size: clamp(45px, 10vw, 62px); letter-spacing: -1.3px; }
   .hub-hero .eyebrow { margin-bottom: 15px; }
