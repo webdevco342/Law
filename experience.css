@@ -1,11 +1,14 @@
 /* Experience: an editorial record of practice, responsibility and education. */
-.experience-main .experience-hero { padding-top: 32px; }
-.experience-hero-kicker { display: flex; justify-content: space-between; gap: 20px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
-.experience-hero-kicker .eyebrow { margin: 0; }
-.experience-hero-kicker > span { color: var(--muted); font-size: 9px; letter-spacing: 1.5px; }
+.experience-main .experience-hero { --experience-intro-inset: 32px; padding-top: var(--experience-intro-inset); }
+/* Keep the full-width dark introduction separate from the light gallery and record. */
+.experience-hero-kicker, .experience-hero-heading { background: #0b0e12; outline: 100vmax solid #0b0e12; clip-path: inset(0 -100vmax); }
+.experience-hero-kicker { display: flex; justify-content: space-between; gap: 20px; padding-bottom: 18px; border-bottom: 1px solid rgba(215, 188, 120, .22); clip-path: inset(calc(-1 * var(--experience-intro-inset)) -100vmax 0); }
+.experience-hero-kicker .eyebrow { margin: 0; color: var(--gold-light); }
+.experience-hero-kicker > span { color: #bcb9b1; font-size: 9px; letter-spacing: 1.5px; }
 .experience-hero-heading { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, .8fr); gap: 55px; align-items: end; padding-block: 29px 34px; }
-.experience-main .experience-hero h1 { margin: 0; font-size: clamp(42px, 4.15vw, 59px); line-height: 1.08; letter-spacing: -1.4px; }
-.experience-hero-heading > p { max-width: 300px; padding-bottom: 5px; color: var(--muted); font-size: 14px; line-height: 1.9; }
+.experience-main .experience-hero h1 { margin: 0; font-size: clamp(42px, 4.15vw, 59px); line-height: 1.08; letter-spacing: -1.4px; color: var(--ivory); }
+.experience-main .experience-hero h1 em { color: var(--gold-light); }
+.experience-hero-heading > p { max-width: 300px; padding-bottom: 5px; color: #c6c4bd; font-size: 14px; line-height: 1.9; }
 .experience-hero-feature { display: grid; grid-template-columns: minmax(0, 2.6fr) minmax(0, 1fr); border: 1px solid var(--line); }
 .experience-gallery { min-width: 0; background: var(--ivory); }
 .experience-gallery-viewport { position: relative; height: clamp(420px, 36vw, 520px); overflow: hidden; background: #e7e4dc; touch-action: pan-y pinch-zoom; }
@@ -159,7 +162,7 @@
   .experience-teaching { gap: 38px; }
 }
 @media (max-width: 600px) {
-  .experience-main .experience-hero { padding-top: 24px; }
+  .experience-main .experience-hero { --experience-intro-inset: 24px; }
   .experience-hero-kicker { gap: 12px; padding-bottom: 16px; }
   .experience-hero-kicker .eyebrow { font-size: 8px; letter-spacing: 1.2px; }
   .experience-hero-kicker > span { font-size: 7px; letter-spacing: .8px; }
