@@ -13,7 +13,7 @@ html=html.slice(0,start)+`              <!-- Supplied client portrait; original 
 `+html.slice(end);
 const desktop=/<nav class="desktop-nav"[\s\S]*?<\/nav>/;
 html=html.replace(desktop,`<nav class="desktop-nav" aria-label="Main navigation"><a href="#about">Profile</a><a href="#practice">Practice</a><a href="#experience">Experience</a><a href="#advocacy">Advocacy</a><a href="#insights">Insights &amp; Media</a><a href="#contact">Contact</a></nav>`);
-html=html.replace('<a href="#credentials">Credentials</a><a href="#contact">Contact</a>', '<a href="#credentials">Credentials</a><a href="insights.html">Insights</a><a href="media.html">Media &amp; Interviews</a><a href="#contact">Contact</a>');
+html=html.replace(/<nav aria-label="Mobile navigation">[\s\S]*?<\/nav>/, `<nav aria-label="Mobile navigation"><a href="#about">Profile</a><a href="#practice">Practice</a><a href="#experience">Experience</a><a href="#advocacy">Advocacy</a><a href="insights-media.html">Insights &amp; Media</a><a href="#contact">Contact</a></nav>`);
 html=html.replace('Legal Drafting &amp; Due Diligence','Legal Drafting, Research &amp; Due Diligence');
 const profileCopy=html.indexOf('<div class="profile-copy"');
 const profileEnd=html.lastIndexOf('</div>',profileCopy);

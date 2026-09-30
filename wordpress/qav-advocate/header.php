@@ -99,10 +99,12 @@
         </button>
       </div>
       <nav aria-label="Mobile navigation">
-        <a href="<?php echo esc_url(qav_home_anchor('home')); ?>">Home</a><a href="<?php echo esc_url(qav_home_anchor('about')); ?>">About</a
-        ><a href="<?php echo esc_url(qav_home_anchor('practice')); ?>">Practice Areas</a
-        ><a href="<?php echo esc_url(qav_home_anchor('experience')); ?>">Experience</a><a href="<?php echo esc_url(qav_home_anchor('advocacy')); ?>">Advocacy</a
-        ><a href="<?php echo esc_url(qav_home_anchor('credentials')); ?>">Credentials</a><a href="insights-media.html">Insights &amp; Media</a><a href="<?php echo esc_url(qav_insights_url()); ?>">Insights</a><a href="<?php echo esc_url(qav_media_url()); ?>">Media &amp; Interviews</a><a href="<?php echo esc_url(qav_home_anchor('contact')); ?>">Contact</a>
+        <a href="<?php echo esc_url(qav_home_anchor('about')); ?>">Profile</a>
+        <a href="<?php echo esc_url(qav_home_anchor('practice')); ?>">Practice</a>
+        <a href="<?php echo esc_url(qav_home_anchor('experience')); ?>">Experience</a>
+        <a href="<?php echo esc_url(qav_home_anchor('advocacy')); ?>">Advocacy</a>
+        <?php qav_hub_nav(); ?>
+        <a href="<?php echo esc_url(qav_home_anchor('contact')); ?>">Contact</a>
       </nav>
       <a class="button button-gold" href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
         >Request a Consultation<svg class="icon">
