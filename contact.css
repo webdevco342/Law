@@ -1,3 +1,9 @@
+/* A champagne opening, scoped to the Contact hero and its information row. */
+.contact-main > .detail-hero { background: #f1e5c8; color: var(--navy); }
+.contact-main > .detail-hero .detail-hero-copy,
+.contact-main > .detail-hero .detail-hero-meta { color: #4f5c68; }
+.contact-main > .detail-hero .detail-hero-meta { border-color: rgba(6, 26, 47, .18); }
+
 .contact-destination-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.3fr); gap: 80px; align-items: start; }
 .contact-office { position: sticky; top: 120px; }
 .contact-office > .eyebrow { margin-bottom: 16px; }
