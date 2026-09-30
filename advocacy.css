@@ -1,207 +1,196 @@
-/* Rights and responsibility: editorial detail-page composition. */
-.advocacy-main .detail-hero-copy .text-link {
-  margin-top: 21px;
+/* Advocacy: two still-image chapters, with rights and people at the centre. */
+.advocacy-main .advocacy-hero { padding-top: 40px; }
+.advocacy-hero > .container > .eyebrow { margin-bottom: 27px; }
+.advocacy-hero-grid { display: grid; grid-template-columns: minmax(0, 1.85fr) minmax(0, .85fr); gap: 65px; align-items: end; padding-bottom: 54px; }
+.advocacy-main .advocacy-hero h1 { margin: 0; font-size: clamp(54px, 6.1vw, 84px); line-height: 1.04; letter-spacing: -2.3px; }
+.advocacy-hero-copy { max-width: 340px; padding: 0 0 8px 26px; border-left: 1px solid var(--line); color: var(--muted); font-size: 14px; line-height: 1.9; }
+.advocacy-hero-copy .text-link { margin-top: 20px; color: var(--navy); }
+.advocacy-main a:focus-visible { outline: 2px solid var(--gold-dark); outline-offset: 5px; }
+.advocacy-main .dark a:focus-visible { outline-color: var(--gold-light); }
+.advocacy-main .detail-section { padding-block: 86px; }
+.advocacy-main h2 { font-size: clamp(38px, 3.8vw, 54px); }
+.advocacy-main .detail-intro { font-size: 14px; line-height: 1.9; }
+.advocacy-main [id] { scroll-margin-top: 105px; }
+.advocacy-section-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; padding-block: 18px; border-block: 1px solid var(--line); color: var(--muted); font-size: 9px; letter-spacing: 1.5px; }
+.advocacy-opening-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 30px 80px; padding-top: 47px; align-items: start; }
+.advocacy-manifesto { grid-column: 1; grid-row: 1; padding-top: 12px; }
+.advocacy-main .advocacy-manifesto h2 { max-width: 320px; font-family: var(--font-body); font-size: 9px; line-height: 1.8; letter-spacing: 1.6px; }
+.advocacy-manifesto > p { margin-top: 25px; font-family: var(--font-display); font-size: clamp(49px, 4.8vw, 67px); line-height: 1.02; letter-spacing: -1.6px; color: var(--navy); }
+.advocacy-manifesto em { color: var(--gold-dark); }
+.advocacy-opening-figure { position: relative; isolation: isolate; grid-column: 2; grid-row: 1 / 3; margin: 14px 14px 0 0; }
+.advocacy-opening-figure::before { content: ""; position: absolute; z-index: -1; inset: -14px -14px 14px 14px; border: 1px solid #b39657; }
+.advocacy-opening-figure img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+.advocacy-themes { grid-column: 1; grid-row: 2; max-width: 400px; border-top: 1px solid var(--line); }
+.advocacy-themes a { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 48px; padding-block: 10px; border-bottom: 1px solid var(--line); color: var(--text); font-size: 12px; line-height: 1.7; }
+.advocacy-themes a > span { color: var(--gold-dark); font-size: 15px; }
+.advocacy-themes a:hover { color: var(--gold-dark); }
+.advocacy-main .advocacy-rights-section { padding-top: 74px; }
+.advocacy-main .advocacy-chapter-label { padding-top: 24px; border-top: 1px solid var(--line); font-family: var(--font-body); font-size: 9px; line-height: 1.8; letter-spacing: 1.8px; }
+.advocacy-rights { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 95px; align-items: start; margin-top: 38px; }
+.advocacy-human-feature { padding-top: 5px; }
+.advocacy-rights .detail-number { font-size: 9px; letter-spacing: 1.8px; }
+.advocacy-main .advocacy-rights h3 { margin-block: 20px 24px; font-size: clamp(39px, 4vw, 57px); letter-spacing: -1px; }
+.advocacy-rights p { font-size: 14px; line-height: 1.9; color: var(--muted); }
+.advocacy-human-feature p:first-of-type { max-width: 560px; color: var(--navy); font-family: var(--font-display); font-size: 26px; line-height: 1.5; }
+.advocacy-human-feature p + p { max-width: 470px; margin-top: 24px; }
+.advocacy-women-feature { margin-top: 38px; padding: 31px 34px 28px; border-left: 2px solid #b39657; background: var(--paper); }
+.advocacy-main .advocacy-women-feature h3 { margin-top: 17px; font-size: clamp(35px, 3.3vw, 45px); }
+.advocacy-women-feature .text-link { margin-top: 20px; }
+.advocacy-protections-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.65fr); gap: 90px; align-items: start; }
+.advocacy-protections-intro { position: sticky; top: 128px; }
+.advocacy-protections-intro .eyebrow { margin-bottom: 23px; }
+.advocacy-main .advocacy-protections h2 { font-size: clamp(38px, 3.55vw, 50px); }
+.advocacy-protections-intro .detail-intro { margin-top: 27px; color: var(--light-muted); }
+.advocacy-focus-list { position: relative; }
+.advocacy-focus-list::before { content: ""; position: absolute; left: 73px; top: 4px; bottom: 10px; width: 1px; background: var(--dark-line); }
+.advocacy-focus-row { display: grid; grid-template-columns: 74px minmax(0, 1fr); column-gap: 34px; padding-bottom: 32px; }
+.advocacy-focus-row + .advocacy-focus-row { padding-top: 31px; }
+.advocacy-focus-row:last-child { padding-bottom: 0; }
+.advocacy-focus-row > .detail-number { grid-row: 1 / 3; padding-top: 3px; font-family: var(--font-display); font-size: 44px; line-height: 1; letter-spacing: -1px; }
+.advocacy-main .advocacy-focus-heading h3 { font-size: clamp(30px, 2.7vw, 38px); line-height: 1.15; }
+.advocacy-focus-copy { grid-column: 2; margin-top: 22px; padding-bottom: 27px; border-bottom: 1px solid var(--dark-line); }
+.advocacy-focus-copy > p { color: var(--light-muted); font-size: 13px; line-height: 1.9; }
+.advocacy-focus-copy > p:first-child { color: var(--ivory); font-size: 15px; line-height: 1.75; }
+.advocacy-focus-copy > p + p { margin-top: 13px; }
+.advocacy-focus-copy .text-link { margin-top: 17px; color: var(--ivory); border-color: var(--dark-line); }
+.advocacy-focus-copy .text-link .icon { color: var(--gold-light); }
+.advocacy-focus-row:last-child .advocacy-focus-copy { border: 0; padding-bottom: 0; }
+.advocacy-main .advocacy-education { padding-bottom: 95px; }
+.advocacy-education .detail-heading { gap: 65px; margin-bottom: 45px; }
+.advocacy-education .detail-heading > .detail-intro { max-width: 430px; justify-self: end; }
+.advocacy-classroom { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 95px; padding-top: 29px; border-top: 1px solid var(--line); }
+.advocacy-classroom-heading .eyebrow { margin-bottom: 22px; }
+.advocacy-main .advocacy-classroom h3 { font-size: clamp(30px, 2.7vw, 38px); line-height: 1.2; }
+.advocacy-classroom h3 em { color: var(--gold-dark); }
+.advocacy-classroom-copy p { color: var(--muted); font-size: 14px; line-height: 1.9; }
+.advocacy-classroom-copy .text-link { margin-top: 20px; }
+.advocacy-public-chapter { background: var(--paper); padding-bottom: 44px; }
+.advocacy-public-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 100px; align-items: center; }
+.advocacy-public-figure { position: relative; margin-top: -30px; padding-left: 20px; border-left: 1px solid #b39657; max-width: 480px; }
+.advocacy-public-figure img { display: block; width: 100%; height: auto; aspect-ratio: 1070 / 1329; object-fit: contain; }
+.advocacy-public-copy { padding-block: 45px 25px; max-width: 540px; }
+.advocacy-public-copy .eyebrow { margin-bottom: 24px; }
+.advocacy-main .advocacy-public-copy h2 { font-size: clamp(42px, 4vw, 58px); line-height: 1.08; }
+.advocacy-public-copy > p:not(.eyebrow) { margin-top: 28px; max-width: 445px; color: var(--muted); font-size: 14px; line-height: 1.9; }
+.advocacy-public-copy .text-link { margin-top: 23px; }
+.advocacy-main .advocacy-community { padding-block: 94px 68px; }
+.advocacy-community-statement { max-width: 830px; margin-inline: auto; text-align: center; }
+.advocacy-community-statement::before { content: ""; display: block; width: 56px; height: 1px; margin: 0 auto 29px; background: var(--gold-dark); }
+.advocacy-community-statement .eyebrow { margin-bottom: 24px; }
+.advocacy-main .advocacy-community-statement h2 { font-size: clamp(45px, 4.9vw, 68px); letter-spacing: -1.5px; }
+.advocacy-community-copy { max-width: 570px; margin: 27px auto 0; color: var(--muted); font-size: 14px; line-height: 1.9; }
+.advocacy-community-line { margin-top: 29px; color: var(--gold-dark); font-family: var(--font-display); font-size: 27px; font-style: italic; line-height: 1.4; }
+.advocacy-closing { margin-top: 78px; padding-top: 36px; }
+.advocacy-closing h2 { margin: 16px 0 0; }
+@media (max-width: 1100px) {
+  .advocacy-hero-grid { grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); gap: 38px; }
+  .advocacy-main .advocacy-hero h1 { font-size: 66px; letter-spacing: -1.8px; }
+  .advocacy-hero-copy { padding-left: 22px; font-size: 13px; }
+  .advocacy-opening-grid { column-gap: 50px; }
+  .advocacy-manifesto > p { font-size: 57px; }
+  .advocacy-rights { gap: 50px; }
+  .advocacy-protections-grid { gap: 50px; }
+  .advocacy-focus-row { grid-template-columns: 59px minmax(0, 1fr); column-gap: 26px; }
+  .advocacy-focus-list::before { left: 58px; }
+  .advocacy-focus-row > .detail-number { font-size: 39px; }
+  .advocacy-classroom, .advocacy-public-grid { gap: 55px; }
 }
-.advocacy-principles-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: clamp(48px, 8vw, 120px);
+@media (max-width: 800px) {
+  .advocacy-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 26px; padding-bottom: 40px; }
+  .advocacy-main .advocacy-hero h1 { max-width: 690px; font-size: 64px; }
+  .advocacy-hero-copy { max-width: 580px; padding: 0; border-left: 0; }
+  .advocacy-hero-copy .text-link { margin-top: 14px; }
+  .advocacy-opening-grid { column-gap: 35px; padding-top: 35px; }
+  .advocacy-manifesto { padding-top: 5px; }
+  .advocacy-main .advocacy-manifesto h2 { font-size: 8px; letter-spacing: 1.2px; }
+  .advocacy-manifesto > p { font-size: 49px; margin-top: 20px; }
+  .advocacy-themes a { font-size: 11px; }
+  .advocacy-opening-figure { align-self: center; }
+  .advocacy-main .detail-section { padding-block: 65px; }
+  .advocacy-rights { gap: 35px; }
+  .advocacy-women-feature { padding: 25px; margin-top: 25px; }
+  .advocacy-human-feature p:first-of-type { font-size: 23px; }
+  .advocacy-main .advocacy-rights h3 { font-size: 38px; }
+  .advocacy-rights p { font-size: 13px; }
+  .advocacy-protections-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .advocacy-protections-intro { position: static; }
+  .advocacy-protections-intro .detail-intro { max-width: 500px; }
+  .advocacy-focus-row { grid-template-columns: 74px minmax(0, 1fr); column-gap: 35px; }
+  .advocacy-focus-list::before { left: 73px; }
+  .advocacy-focus-row > .detail-number { font-size: 44px; }
+  .advocacy-education .detail-heading, .advocacy-classroom { gap: 38px; }
+  .advocacy-public-grid { gap: 40px; }
+  .advocacy-public-copy .eyebrow { font-size: 9px; letter-spacing: 1.4px; }
+  .advocacy-main .advocacy-public-copy h2 { font-size: 41px; }
+  .advocacy-public-copy > p:not(.eyebrow) { font-size: 13px; }
 }
-.advocacy-principles-statement > p {
-  margin: 30px 0 42px;
-  color: var(--ivory);
-  font-family: var(--font-display);
-  font-size: clamp(58px, 6.5vw, 90px);
-  letter-spacing: -2px;
-  line-height: 1.02;
+@media (max-width: 600px) {
+  .advocacy-main .advocacy-hero { padding-top: 26px; }
+  .advocacy-hero > .container > .eyebrow { margin-bottom: 22px; font-size: 9px; }
+  .advocacy-main .advocacy-hero h1 { font-size: clamp(44px, 11.8vw, 57px); line-height: 1.05; letter-spacing: -1.4px; }
+  .advocacy-hero-grid { gap: 23px; padding-bottom: 30px; }
+  .advocacy-hero-copy { max-width: 380px; }
+  .advocacy-hero-copy .text-link { margin-top: 12px; }
+  .advocacy-section-meta { padding-block: 16px; font-size: 8px; letter-spacing: .9px; gap: 8px 15px; }
+  .advocacy-opening-grid { grid-template-columns: minmax(0, 1fr); gap: 30px; padding-top: 28px; }
+  .advocacy-manifesto { grid-column: 1; grid-row: 1; padding: 0; }
+  .advocacy-main .advocacy-manifesto h2 { max-width: none; font-size: 8px; letter-spacing: 1.2px; }
+  .advocacy-manifesto > p { font-size: 51px; line-height: 1.04; margin-top: 18px; letter-spacing: -1.3px; }
+  .advocacy-opening-figure { grid-column: 1; grid-row: 2; margin: 9px 9px 0 0; }
+  .advocacy-opening-figure::before { inset: -9px -9px 9px 9px; }
+  .advocacy-themes { grid-column: 1; grid-row: 3; max-width: none; }
+  .advocacy-themes a { font-size: 12px; min-height: 49px; }
+  .advocacy-main .detail-section { padding-block: 48px; }
+  .advocacy-main .advocacy-rights-section { padding-top: 42px; }
+  .advocacy-main .advocacy-chapter-label { padding-top: 19px; font-size: 8px; }
+  .advocacy-rights { grid-template-columns: minmax(0, 1fr); gap: 28px; margin-top: 25px; }
+  .advocacy-human-feature { padding: 0; }
+  .advocacy-rights .detail-number { font-size: 8px; }
+  .advocacy-main .advocacy-rights h3 { margin-block: 17px 20px; font-size: 41px; }
+  .advocacy-human-feature p:first-of-type { font-size: 24px; }
+  .advocacy-human-feature p + p { margin-top: 19px; }
+  .advocacy-women-feature { margin: 0; padding: 25px 23px; }
+  .advocacy-main .advocacy-women-feature h3 { font-size: 36px; }
+  .advocacy-women-feature .text-link { margin-top: 15px; }
+  .advocacy-protections-grid { gap: 34px; }
+  .advocacy-main .advocacy-protections h2 { font-size: 36px; }
+  .advocacy-protections-intro .eyebrow { margin-bottom: 19px; }
+  .advocacy-protections-intro .detail-intro { margin-top: 23px; font-size: 13px; }
+  .advocacy-focus-list::before { left: 4px; top: 12px; bottom: 10px; }
+  .advocacy-focus-row { grid-template-columns: minmax(0, 1fr); padding: 0 0 26px 25px; }
+  .advocacy-focus-row + .advocacy-focus-row { padding-top: 0; }
+  .advocacy-focus-row > .detail-number { position: relative; grid-row: auto; padding: 0; margin-bottom: 17px; font-size: 37px; }
+  .advocacy-focus-row > .detail-number::before { content: ""; position: absolute; left: -24px; top: 12px; width: 7px; height: 1px; background: var(--gold-light); }
+  .advocacy-main .advocacy-focus-heading h3 { font-size: 30px; }
+  .advocacy-focus-copy { grid-column: 1; margin-top: 18px; padding-bottom: 26px; }
+  .advocacy-focus-copy > p:first-child { font-size: 14px; }
+  .advocacy-focus-copy .text-link { gap: 13px; font-size: 10px; }
+  .advocacy-main .advocacy-education { padding-bottom: 64px; }
+  .advocacy-education .detail-heading { gap: 23px; margin-bottom: 30px; }
+  .advocacy-main .advocacy-education h2 { font-size: 36px; }
+  .advocacy-education .detail-heading > .detail-intro { justify-self: start; font-size: 13px; }
+  .advocacy-classroom { grid-template-columns: minmax(0, 1fr); gap: 23px; padding-top: 25px; }
+  .advocacy-classroom-heading .eyebrow { margin-bottom: 18px; }
+  .advocacy-main .advocacy-classroom h3 { font-size: 30px; }
+  .advocacy-classroom-copy p { font-size: 13px; }
+  .advocacy-classroom-copy .text-link { margin-top: 16px; }
+  .advocacy-public-chapter { padding-bottom: 36px; }
+  .advocacy-public-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .advocacy-public-figure { max-width: 360px; width: calc(100% - 14px); margin: -20px auto 0 0; padding-left: 13px; }
+  .advocacy-public-copy { padding: 30px 0 0; }
+  .advocacy-public-copy .eyebrow { margin-bottom: 19px; }
+  .advocacy-main .advocacy-public-copy h2 { font-size: 38px; }
+  .advocacy-public-copy > p:not(.eyebrow) { margin-top: 23px; }
+  .advocacy-public-copy .text-link { margin-top: 16px; }
+  .advocacy-main .advocacy-community { padding-block: 55px 47px; }
+  .advocacy-community-statement::before { margin-bottom: 23px; width: 43px; }
+  .advocacy-community-statement .eyebrow { font-size: 8px; letter-spacing: 1.3px; margin-bottom: 20px; }
+  .advocacy-main .advocacy-community-statement h2 { font-size: 42px; line-height: 1.1; letter-spacing: -1px; }
+  .advocacy-community-copy { margin-top: 23px; font-size: 13px; }
+  .advocacy-community-line { margin-top: 23px; font-size: 24px; }
+  .advocacy-closing { margin-top: 45px; padding-top: 28px; gap: 28px; }
+  .advocacy-closing h2 { margin-top: 13px; font-size: 35px; }
 }
-.advocacy-principles-statement em {
-  color: var(--gold-light);
-}
-.advocacy-principles-note {
-  display: block;
-  padding-top: 22px;
-  border-top: 1px solid var(--dark-line);
-  color: var(--light-muted);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 1.9px;
-}
-.advocacy-rights article + article {
-  margin-top: 32px;
-  padding-top: 30px;
-  border-top: 1px solid var(--dark-line);
-}
-.advocacy-rights .detail-number {
-  color: var(--gold-light);
-}
-.advocacy-rights h3 {
-  margin: 13px 0 17px;
-  font-size: clamp(32px, 3.2vw, 43px);
-}
-.advocacy-rights p {
-  max-width: 520px;
-}
-.advocacy-rights .text-link {
-  margin-top: 16px;
-}
-.advocacy-focus-row {
-  display: grid;
-  grid-template-columns: 45px minmax(0, 1fr) minmax(0, 1.12fr);
-  column-gap: clamp(24px, 4vw, 60px);
-  align-items: start;
-  padding: 39px 0;
-  border-top: 1px solid var(--line);
-}
-.advocacy-focus-row:last-child {
-  border-bottom: 1px solid var(--line);
-}
-.advocacy-focus-row > .detail-number {
-  padding-top: 5px;
-}
-.advocacy-focus-icon {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 20px;
-  fill: none;
-  stroke: var(--gold-dark);
-  stroke-width: 1.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.advocacy-focus-heading h3 {
-  font-size: clamp(27px, 2.8vw, 37px);
-  line-height: 1.12;
-  letter-spacing: -0.4px;
-}
-.advocacy-focus-copy > p {
-  color: var(--muted);
-}
-.advocacy-focus-copy > p:first-child {
-  color: var(--text);
-}
-.advocacy-focus-copy > p + p {
-  margin-top: 13px;
-}
-.advocacy-focus-copy .text-link {
-  margin-top: 20px;
-}
-.advocacy-education {
-  background: var(--paper);
-}
-.advocacy-education-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(45px, 8vw, 120px);
-}
-.advocacy-education-intro > .eyebrow,
-.advocacy-community-grid .eyebrow {
-  margin-bottom: 20px;
-}
-.advocacy-education-intro > .detail-intro {
-  margin-top: 24px;
-}
-.advocacy-education-intro img {
-  width: 100%;
-  max-width: 470px;
-  margin-top: 26px;
-  mix-blend-mode: multiply;
-}
-.advocacy-education-copy article {
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
-}
-.advocacy-education-copy article + article {
-  margin-top: 34px;
-}
-.advocacy-education-copy h3 {
-  margin: 15px 0 23px;
-  font-size: clamp(28px, 2.8vw, 37px);
-}
-.advocacy-education-copy article > p:not(.eyebrow) {
-  color: var(--muted);
-}
-.advocacy-education-copy .text-link {
-  margin-top: 19px;
-}
-.advocacy-community-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: clamp(40px, 8vw, 120px);
-  margin-bottom: 64px;
-}
-.advocacy-community-copy {
-  max-width: 510px;
-  color: var(--muted);
-}
-.advocacy-community-copy .advocacy-community-line {
-  margin-top: 26px;
-  color: var(--gold-dark);
-  font-family: var(--font-display);
-  font-size: 29px;
-  font-style: italic;
-  line-height: 1.25;
-}
-@media (max-width: 900px) {
-  .advocacy-focus-row {
-    grid-template-columns: 28px minmax(0, 0.9fr) minmax(0, 1.1fr);
-    column-gap: 25px;
-  }
-  .advocacy-principles-grid,
-  .advocacy-education-grid,
-  .advocacy-community-grid {
-    gap: 40px;
-  }
-}
-@media (max-width: 700px) {
-  .advocacy-principles-grid,
-  .advocacy-education-grid,
-  .advocacy-community-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .advocacy-principles-statement > p {
-    font-size: clamp(58px, 11vw, 76px);
-    margin-bottom: 28px;
-  }
-  .advocacy-rights article + article {
-    margin-top: 26px;
-    padding-top: 26px;
-  }
-  .advocacy-focus-row {
-    grid-template-columns: 27px minmax(0, 1fr);
-    gap: 22px 19px;
-    padding-block: 30px;
-  }
-  .advocacy-focus-heading {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .advocacy-focus-icon {
-    margin-bottom: 15px;
-  }
-  .advocacy-focus-copy {
-    grid-column: 2;
-  }
-  .advocacy-education-intro img {
-    max-width: 390px;
-    margin: 20px auto 0;
-  }
-  .advocacy-community-grid {
-    gap: 25px;
-    margin-bottom: 43px;
-  }
-}
-@media (max-width: 380px) {
-  .advocacy-focus-row {
-    column-gap: 12px;
-    grid-template-columns: 21px minmax(0, 1fr);
-  }
-  .advocacy-focus-heading h3 {
-    font-size: 26px;
-  }
-  .advocacy-focus-copy .text-link {
-    gap: 12px;
-  }
+@media (prefers-reduced-motion: reduce) {
+  .advocacy-main [data-reveal] { transition: none; transform: none; }
 }

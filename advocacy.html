@@ -161,65 +161,72 @@
     </dialog>
 
     <main id="main" class="detail-main advocacy-main" tabindex="-1">
-      <section class="detail-hero" aria-labelledby="advocacy-page-title">
+      <section class="detail-hero advocacy-hero" aria-labelledby="advocacy-page-title">
         <div class="container">
           <p class="eyebrow">03 / ADVOCACY</p>
-          <div class="detail-hero-grid">
+          <div class="advocacy-hero-grid">
             <h1 id="advocacy-page-title">The law carries<br /><em>a human responsibility.</em></h1>
-            <div class="detail-hero-copy">
+            <div class="advocacy-hero-copy">
               <p>A commitment to human rights, women’s rights and legal education alongside litigation and advisory practice.</p>
               <a class="text-link" href="contact.html">Begin a conversation<svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a>
             </div>
           </div>
-          <div class="detail-hero-meta"><span>RIGHTS &amp; RESPONSIBILITY</span><span>LAHORE, PAKISTAN</span></div>
-          <nav class="detail-index" aria-label="Advocacy areas">
-            <a href="#human-rights">Human rights</a>
-            <a href="#womens-rights">Women’s rights</a>
-            <a href="#workplace-protections">Workplace protections &amp; redressal</a>
-            <a href="#legal-education">Legal education</a>
-            <a href="#social-work">Social work</a>
-          </nav>
         </div>
       </section>
 
-      <section class="detail-section advocacy-principles dark" aria-labelledby="advocacy-principles-title">
-        <div class="container advocacy-principles-grid">
-          <div class="advocacy-principles-statement">
-            <h2 class="eyebrow" id="advocacy-principles-title">A COMMITMENT BEYOND THE COURTROOM</h2>
-            <p>For dignity.<br />For equality.<br /><em>For people.</em></p>
-            <span class="advocacy-principles-note">THE HUMAN SIDE OF LAW</span>
+      <section class="advocacy-opening" aria-labelledby="advocacy-principles-title">
+        <div class="container">
+          <div class="advocacy-section-meta"><span>RIGHTS &amp; RESPONSIBILITY</span><span>LAHORE, PAKISTAN</span></div>
+          <div class="advocacy-opening-grid">
+            <div class="advocacy-manifesto">
+              <h2 class="eyebrow" id="advocacy-principles-title">A COMMITMENT BEYOND THE COURTROOM</h2>
+              <p>For dignity.<br />For equality.<br /><em>For people.</em></p>
+            </div>
+            <figure class="advocacy-opening-figure">
+              <img src="assets/images/advocacy/public-engagement-collage.jpg" alt="A collage centred on a woman speaking into a microphone, with smaller photographs of professional gatherings and a candidacy caption." width="1070" height="1070" loading="eager" fetchpriority="high" decoding="async" />
+            </figure>
+            <nav class="advocacy-themes" aria-label="Advocacy areas">
+              <a href="#human-rights">Human rights<span aria-hidden="true">↗</span></a>
+              <a href="#womens-rights">Women’s rights<span aria-hidden="true">↗</span></a>
+              <a href="#workplace-protections">Workplace protections &amp; redressal<span aria-hidden="true">↗</span></a>
+              <a href="#legal-education">Legal education<span aria-hidden="true">↗</span></a>
+              <a href="#social-work">Social work<span aria-hidden="true">↗</span></a>
+            </nav>
           </div>
+        </div>
+      </section>
+
+      <section class="detail-section advocacy-rights-section" aria-labelledby="advocacy-rights-title">
+        <div class="container">
+          <h2 class="eyebrow advocacy-chapter-label" id="advocacy-rights-title">THE HUMAN SIDE OF LAW</h2>
           <div class="advocacy-rights">
-            <article id="human-rights">
+            <article class="advocacy-human-feature" data-reveal id="human-rights">
               <span class="detail-number">01 / HUMAN RIGHTS</span>
-              <h3>Human rights</h3>
+              <h3 id="human-rights-title">Human rights</h3>
               <p>Qurat-ul-Ain Viirk’s commitment to human rights sits alongside her litigation and advisory practice.</p>
               <p>This rights-focused advocacy includes workplace protections, gender-based violence redressal and public legal education.</p>
             </article>
-            <article id="womens-rights">
+            <article class="advocacy-women-feature" data-reveal id="womens-rights">
               <span class="detail-number">02 / WOMEN’S RIGHTS</span>
-              <h3>Women’s rights</h3>
+              <h3 id="womens-rights-title">Women’s rights</h3>
               <p>Women’s rights are an active focus of her advocacy, with attention to anti-harassment law, workplace grievances and gender-based violence redressal.</p>
-              <a class="text-link light-link" href="practice.html">Explore the legal practice<svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a>
+              <a class="text-link" href="practice.html">Explore the legal practice<svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="detail-section advocacy-protections" id="workplace-protections" aria-labelledby="advocacy-protections-title">
-        <div class="container">
-          <div class="detail-heading">
-            <div>
-              <p class="eyebrow">PROTECTION &amp; REDRESSAL</p>
-              <h2 class="detail-section-title" id="advocacy-protections-title">Rights-focused counsel.<br /><em>Considered support.</em></h2>
-            </div>
+      <section class="detail-section advocacy-protections dark" id="workplace-protections" aria-labelledby="advocacy-protections-title">
+        <div class="container advocacy-protections-grid">
+          <div class="advocacy-protections-intro">
+            <p class="eyebrow">PROTECTION &amp; REDRESSAL</p>
+            <h2 id="advocacy-protections-title">Rights-focused counsel.<br /><em>Considered support.</em></h2>
             <p class="detail-intro">Workplace protections and gender-based violence redressal form part of the practice’s commitment to human rights and women’s rights.</p>
           </div>
           <div class="advocacy-focus-list">
-            <article class="advocacy-focus-row" id="anti-harassment">
+            <article class="advocacy-focus-row" data-reveal id="anti-harassment">
               <span class="detail-number">03</span>
               <div class="advocacy-focus-heading">
-                <svg class="advocacy-focus-icon" aria-hidden="true"><use href="#icon-shield" /></svg>
                 <h3>Anti-Harassment Law<br />&amp; Compliance</h3>
               </div>
               <div class="advocacy-focus-copy">
@@ -228,10 +235,9 @@
                 <a class="text-link" href="contact.html?matter=Workplace%20%2F%20Anti-Harassment" data-matter="Workplace / Anti-Harassment">Discuss a workplace matter<svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a>
               </div>
             </article>
-            <article class="advocacy-focus-row" id="gbv-redressal">
+            <article class="advocacy-focus-row" data-reveal id="gbv-redressal">
               <span class="detail-number">04</span>
               <div class="advocacy-focus-heading">
-                <svg class="advocacy-focus-icon" aria-hidden="true"><use href="#icon-scales" /></svg>
                 <h3>Gender-Based<br />Violence Redressal</h3>
               </div>
               <div class="advocacy-focus-copy">
@@ -240,10 +246,9 @@
                 <a class="text-link" href="contact.html?matter=Women%27s%20Rights%20%2F%20GBV" data-matter="Women's Rights / GBV">Discuss your matter<svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a>
               </div>
             </article>
-            <article class="advocacy-focus-row" id="workplace-grievances">
+            <article class="advocacy-focus-row" data-reveal id="workplace-grievances">
               <span class="detail-number">05</span>
               <div class="advocacy-focus-heading">
-                <svg class="advocacy-focus-icon" aria-hidden="true"><use href="#icon-people" /></svg>
                 <h3>Workplace Grievance<br />Counselling</h3>
               </div>
               <div class="advocacy-focus-copy">
@@ -257,44 +262,44 @@
       </section>
 
       <section class="detail-section advocacy-education" id="legal-education" aria-labelledby="advocacy-education-title">
-        <div class="container advocacy-education-grid">
-          <div class="advocacy-education-intro">
-            <p class="eyebrow">06 / KNOWLEDGE SHARED</p>
-            <h2 class="detail-section-title" id="advocacy-education-title">Public Legal Education<br /><em>&amp; Media Advocacy</em></h2>
+        <div class="container">
+          <div class="detail-heading" data-reveal>
+            <div><p class="eyebrow">06 / KNOWLEDGE SHARED</p><h2 id="advocacy-education-title">Public Legal Education<br /><em>&amp; Media Advocacy</em></h2></div>
             <p class="detail-intro">Teaching, academic mentorship and capacity building form another part of Qurat-ul-Ain Viirk’s professional journey.</p>
-            <img src="assets/svg/legal-study.svg" alt="Editorial illustration of an open volume resting on bound legal books" width="800" height="520" loading="lazy" />
           </div>
-          <div class="advocacy-education-copy">
-            <article>
-              <p class="eyebrow">IN THE CLASSROOM</p>
-              <h3>Experience in practice.<br /><em>Perspective in the classroom.</em></h3>
-              <p>As a Law Lecturer at Islamia Law College, Peshawar, from 2016 to 2019, she taught core law subjects to LLB students and developed course materials and examination papers.</p>
+          <article class="advocacy-classroom" data-reveal>
+            <div class="advocacy-classroom-heading"><p class="eyebrow">IN THE CLASSROOM</p>
+              <h3>Experience in practice.<br /><em>Perspective in the classroom.</em></h3></div>
+            <div class="advocacy-classroom-copy"><p>As a Law Lecturer at Islamia Law College, Peshawar, from 2016 to 2019, she taught core law subjects to LLB students and developed course materials and examination papers.</p>
               <p>Her teaching appointment at Quaid-e-Azam Law College, Okara, from 2007 to 2012 also contributed to legal education alongside her professional journey.</p>
-              <a class="text-link" href="experience.html">Explore the professional journey<svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a>
-            </article>
-            <article>
+              <a class="text-link" href="experience.html">Explore the professional journey<svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="advocacy-public-chapter" aria-labelledby="advocacy-public-title">
+        <div class="container advocacy-public-grid">
+          <figure class="advocacy-public-figure" data-reveal>
+            <img src="assets/images/advocacy/professional-engagement-portrait.jpg" alt="A woman wearing floral garlands stands beside a large framed portrait in a meeting room." width="1070" height="1329" loading="lazy" decoding="async" />
+          </figure>
+          <div class="advocacy-public-copy" data-reveal>
               <p class="eyebrow">IN PUBLIC CONVERSATION</p>
-              <h3>Perspectives on law<br /><em>and responsibility.</em></h3>
+              <h2 id="advocacy-public-title">Perspectives on law<br /><em>and responsibility.</em></h2>
               <p>Insights and recorded perspectives on law, justice, human rights, women’s rights, institutional accountability and emerging legal developments.</p>
               <a class="text-link" href="insights-media.html">Explore Insights &amp; Media<svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a>
-            </article>
-          </div>
+            </div>
         </div>
       </section>
 
       <section class="detail-section advocacy-community" id="social-work" aria-labelledby="advocacy-social-title">
         <div class="container">
-          <div class="advocacy-community-grid">
-            <div>
-              <p class="eyebrow">07 / BEYOND THE COURTROOM</p>
-              <h2 class="detail-section-title" id="advocacy-social-title">Social work.<br /><em>A human commitment.</em></h2>
-            </div>
-            <div class="advocacy-community-copy">
-              <p>Social work sits alongside human rights and women’s rights in Qurat-ul-Ain Viirk’s commitment beyond the courtroom.</p>
-              <p class="advocacy-community-line">For dignity. For equality. For people.</p>
-            </div>
+          <div class="advocacy-community-statement" data-reveal>
+            <p class="eyebrow">07 / BEYOND THE COURTROOM</p>
+            <h2 id="advocacy-social-title">Social work.<br /><em>A human commitment.</em></h2>
+            <p class="advocacy-community-copy">Social work sits alongside human rights and women’s rights in Qurat-ul-Ain Viirk’s commitment beyond the courtroom.</p>
+            <p class="advocacy-community-line">For dignity. For equality. For people.</p>
           </div>
-          <div class="detail-cta">
+          <div class="detail-cta advocacy-closing">
             <div><p class="eyebrow">BEGIN A CONVERSATION</p><h2>A considered approach<br /><em>to your matter.</em></h2></div>
             <a class="button button-gold" href="contact.html">Request Consultation<svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a>
           </div>
