@@ -20,7 +20,7 @@ function Write-PortableZip($sourceDirectory, $destination, $prefix) {
 }
 Write-PortableZip (Join-Path $workspace 'wordpress\qav-publishing') (Join-Path $delivery 'qav-publishing.zip') 'qav-publishing/'
 Write-PortableZip (Join-Path $workspace 'wordpress\qav-advocate') (Join-Path $delivery 'qav-advocate.zip') 'qav-advocate/'
-foreach ($name in @('index.html','insights.html','media.html','privacy.html','style.css','upgrade.css','script.js','README.md','CLIENT-PUBLISHING-GUIDE.md','CONTENT-SOURCES.md','QA.md')) {
+foreach ($name in @('favicon.ico','favicon.png','apple-touch-icon.png','index.html','insights.html','media.html','privacy.html','style.css','upgrade.css','script.js','README.md','CLIENT-PUBLISHING-GUIDE.md','CONTENT-SOURCES.md','QA.md')) {
     Copy-Item -LiteralPath (Join-Path $workspace $name) -Destination (Join-Path $staging $name) -Force
 }
 Copy-Item -LiteralPath (Join-Path $workspace 'assets') -Destination $staging -Recurse -Force
