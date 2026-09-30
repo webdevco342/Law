@@ -67,7 +67,7 @@ get_header();
   <section class="hub-cta" aria-labelledby="hub-cta-title">
     <div class="container hub-cta-inner">
       <div><h2 id="hub-cta-title">For a legal enquiry,<br><em>start a conversation.</em></h2><p>Get in touch with the office to discuss your legal matter.</p></div>
-      <a class="button button-gold" href="<?php echo esc_url(qav_home_anchor('contact')); ?>">Request Consultation<svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a>
+      <a class="button button-gold" href="<?php echo esc_url(qav_page_url('contact')); ?>">Request Consultation<svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a>
     </div>
   </section>
 </main>

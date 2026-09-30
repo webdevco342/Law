@@ -12,8 +12,9 @@ html=html.slice(0,start)+`              <!-- Supplied client portrait; original 
               </picture>
 `+html.slice(end);
 const desktop=/<nav class="desktop-nav"[\s\S]*?<\/nav>/;
-html=html.replace(desktop,`<nav class="desktop-nav" aria-label="Main navigation"><a href="#about">Profile</a><a href="#practice">Practice</a><a href="#experience">Experience</a><a href="#advocacy">Advocacy</a><a href="#insights">Insights &amp; Media</a><a href="#contact">Contact</a></nav>`);
-html=html.replace(/<nav aria-label="Mobile navigation">[\s\S]*?<\/nav>/, `<nav aria-label="Mobile navigation"><a href="#about">Profile</a><a href="#practice">Practice</a><a href="#experience">Experience</a><a href="#advocacy">Advocacy</a><a href="insights-media.html">Insights &amp; Media</a><a href="#contact">Contact</a></nav>`);
+const globalNavigation=`<a href="#about">Profile</a><a href="practice.html">Practice</a><a href="experience.html">Experience</a><a href="advocacy.html">Advocacy</a><a href="insights-media.html">Insights &amp; Media</a><a href="contact.html">Contact</a>`;
+html=html.replace(desktop,`<nav class="desktop-nav" aria-label="Main navigation">${globalNavigation}</nav>`);
+html=html.replace(/<nav aria-label="Mobile navigation">[\s\S]*?<\/nav>/, `<nav aria-label="Mobile navigation">${globalNavigation}</nav>`);
 html=html.replace('Legal Drafting &amp; Due Diligence','Legal Drafting, Research &amp; Due Diligence');
 const profileCopy=html.indexOf('<div class="profile-copy"');
 const profileEnd=html.lastIndexOf('</div>',profileCopy);

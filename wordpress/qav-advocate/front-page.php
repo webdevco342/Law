@@ -18,10 +18,10 @@
               matters that shape lives and institutions.
             </p>
             <div class="hero-actions hero-enter">
-              <a class="button button-gold" href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
+              <a class="button button-gold" href="<?php echo esc_url(qav_page_url('contact')); ?>"
                 >Request a Consultation<svg class="icon">
                   <use href="#icon-arrow-up" /></svg></a
-              ><a class="text-link light-link" href="<?php echo esc_url(qav_home_anchor('practice')); ?>"
+              ><a class="text-link light-link" href="<?php echo esc_url(qav_page_url('practice')); ?>"
                 >Explore Practice Areas<svg class="icon">
                   <use href="#icon-arrow" /></svg
               ></a>
@@ -96,7 +96,7 @@
               <h2 id="about-title">
                 A considered approach.<br /><em>A committed advocate.</em>
               </h2>
-              <a class="text-link" href="<?php echo esc_url(qav_home_anchor('experience')); ?>"
+              <a class="text-link" href="<?php echo esc_url(qav_page_url('experience')); ?>"
                 >Explore the Professional Journey<svg class="icon">
                   <use href="#icon-arrow" /></svg
               ></a>
@@ -150,7 +150,7 @@
           <div class="practice-grid">
             <a
               class="practice-card"
-              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
+              href="<?php echo esc_url(add_query_arg('matter','Civil Matter',qav_page_url('contact'))); ?>"
               data-matter="Civil Matter"
               data-reveal
               ><div class="card-top">
@@ -168,7 +168,7 @@
             ></a>
             <a
               class="practice-card"
-              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
+              href="<?php echo esc_url(add_query_arg('matter','Criminal Matter',qav_page_url('contact'))); ?>"
               data-matter="Criminal Matter"
               data-reveal
               ><div class="card-top">
@@ -186,7 +186,7 @@
             ></a>
             <a
               class="practice-card"
-              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
+              href="<?php echo esc_url(add_query_arg('matter','Corporate / Contract Matter',qav_page_url('contact'))); ?>"
               data-matter="Corporate / Contract Matter"
               data-reveal
               ><div class="card-top">
@@ -204,7 +204,7 @@
             ></a>
             <a
               class="practice-card"
-              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
+              href="<?php echo esc_url(add_query_arg('matter','Banking Matter',qav_page_url('contact'))); ?>"
               data-matter="Banking Matter"
               data-reveal
               ><div class="card-top">
@@ -222,7 +222,7 @@
             ></a>
             <a
               class="practice-card"
-              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
+              href="<?php echo esc_url(add_query_arg('matter','Property / LDA Matter',qav_page_url('contact'))); ?>"
               data-matter="Property / LDA Matter"
               data-reveal
               ><div class="card-top">
@@ -240,7 +240,7 @@
             ></a>
             <a
               class="practice-card"
-              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
+              href="<?php echo esc_url(add_query_arg('matter','Workplace / Anti-Harassment',qav_page_url('contact'))); ?>"
               data-matter="Workplace / Anti-Harassment"
               data-reveal
               ><div class="card-top">
@@ -258,7 +258,7 @@
             ></a>
             <a
               class="practice-card"
-              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
+              href="<?php echo esc_url(add_query_arg('matter','Women\'s Rights / GBV',qav_page_url('contact'))); ?>"
               data-matter="Women's Rights / GBV"
               data-reveal
               ><div class="card-top">
@@ -276,7 +276,7 @@
             ></a>
             <a
               class="practice-card"
-              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
+              href="<?php echo esc_url(add_query_arg('matter','Other',qav_page_url('contact'))); ?>"
               data-matter="Other"
               data-reveal
               ><div class="card-top">
@@ -294,7 +294,7 @@
             ></a>
             <a
               class="practice-card"
-              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
+              href="<?php echo esc_url(add_query_arg('matter','Arbitration & Dispute Resolution',qav_page_url('contact'))); ?>"
               data-matter="Arbitration &amp; Dispute Resolution"
               data-reveal
               ><div class="card-top">
@@ -314,8 +314,8 @@
           </div>
           <p class="practice-note">
             Every legal matter begins with understanding its context.<a
-              href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
-              >Start a conversation <span aria-hidden="true">↗</span></a
+              href="<?php echo esc_url(qav_page_url('practice')); ?>"
+              >Explore Practice <span aria-hidden="true">↗</span></a
             >
           </p>
         <?php qav_practice_insights(); ?></div>
@@ -392,6 +392,7 @@
                 <span>2007</span><span aria-hidden="true">——</span
                 ><span>Today</span>
               </div>
+              <a class="text-link light-link home-destination-link" href="<?php echo esc_url(qav_page_url('experience')); ?>">Explore the Professional Journey <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a>
             </div>
             <ol class="timeline">
               <li data-reveal>
@@ -517,6 +518,7 @@
                   ><span>Public Legal Education &amp; Media Advocacy</span>
                 </div>
               </div>
+            <a class="text-link home-destination-link" href="<?php echo esc_url(qav_page_url('advocacy')); ?>">Explore Advocacy <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a>
             </div>
           </div>
         </div>
@@ -532,21 +534,21 @@
           <ol class="home-media-previews" role="list" aria-label="Explore the three content areas">
             <li class="home-media-preview" data-reveal>
               <p class="eyebrow home-media-kicker"><span aria-hidden="true">01</span><span>INSIGHTS</span></p>
-              <h3><a href="insights-media.html#hub-latest">Perspectives — Forthcoming</a></h3>
+              <h3><a href="<?php echo esc_url(qav_hub_url().'#hub-latest'); ?>">Perspectives — Forthcoming</a></h3>
               <p>Informed perspectives on law, justice, human rights, women’s rights, institutional accountability, and emerging legal developments.</p>
             </li>
             <li class="home-media-preview" data-reveal>
               <p class="eyebrow home-media-kicker"><span aria-hidden="true">02</span><span>VIDEO &amp; MEDIA</span></p>
-              <h3><a href="insights-media.html#hub-video">Video &amp; Media</a></h3>
+              <h3><a href="<?php echo esc_url(qav_hub_url().'#hub-video'); ?>">Video &amp; Media</a></h3>
               <p>Recorded perspectives on law, rights and professional practice.</p>
             </li>
             <li class="home-media-preview" data-reveal>
               <p class="eyebrow home-media-kicker"><span aria-hidden="true">03</span><span>MEDIA &amp; INTERVIEWS</span></p>
-              <h3><a href="insights-media.html#hub-interviews">Media &amp; Interviews</a></h3>
+              <h3><a href="<?php echo esc_url(qav_hub_url().'#hub-interviews'); ?>">Media &amp; Interviews</a></h3>
               <p>Interviews, discussions and professional appearances, brought together in one place.</p>
             </li>
           </ol>
-          <div class="home-media-footer" data-reveal><a class="text-link" href="insights-media.html">Explore Insights &amp; Media <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a></div>
+          <div class="home-media-footer" data-reveal><a class="text-link" href="<?php echo esc_url(qav_hub_url()); ?>">Explore Insights &amp; Media <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a></div>
         </div>
       </section>      <section
         class="section capabilities-section"
@@ -789,6 +791,7 @@
                 Contact the office to discuss your legal matter and consultation
                 requirements.
               </p>
+              <a class="text-link light-link home-destination-link" href="<?php echo esc_url(qav_page_url('contact')); ?>">Begin a Conversation <svg class="icon" aria-hidden="true"><use href="#icon-arrow-up" /></svg></a>
               <address class="contact-details">
                 <div>
                   <svg class="icon"><use href="#icon-phone" /></svg>

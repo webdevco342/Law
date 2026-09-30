@@ -50,6 +50,10 @@ YouTube and Vimeo load only after **Load player** is selected. There are no vide
 
 ## Local development
 
+The public site now has six primary destinations: the homepage/Profile, `practice.html`, `experience.html`, `advocacy.html`, `insights-media.html`, and `contact.html`. The four new pages use the existing homepage content, shared `detail-pages.css`, and a small page-specific stylesheet. Homepage sections remain available, with links to the dedicated pages. Consultation links can carry `?matter=` using the form's existing option values; enquiries still prepare an email draft only.
+
+For the WordPress companion, `node tools/build-theme.mjs --detail-pages-only` refreshes the four templates, metadata, styles, shared navigation and relevant internal links without rebuilding the approved homepage or media content. Native routes use `/practice/`, `/experience/`, `/advocacy/` and `/contact/`; absent pages are created on theme activation or an administrator visit, following the existing hub convention. Existing pages are retained. The static HTML remains the authoring source for these templates.
+
 Static preview: `node tools/serve.mjs`, then `http://127.0.0.1:4173`.
 
 WordPress preview: `http://127.0.0.1:9400`; dashboard: `/wp-admin/`. Random local credentials are saved only in ignored `tmp/upgrade/local-admin.json`, never in delivery archives. The local site is excluded from indexing.

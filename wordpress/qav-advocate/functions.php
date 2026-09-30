@@ -1,6 +1,7 @@
 <?php
 if (!defined('ABSPATH')) exit;
 require_once get_template_directory().'/insights-media.php';
+require_once get_template_directory().'/detail-pages.php';
 // The companion plugin keeps publication data independent of the theme.
 if (!function_exists('qav_profile')) {
     function qav_profile($key) {
@@ -49,6 +50,8 @@ function qav_portrait($hero=false){
 }
 function qav_author_name($id=0){return get_post_meta($id?:get_the_ID(),'_qav_author',true) ?: 'Qurat-ul-Ain Viirk';}
 function qav_description(){
+    $detail=qav_detail_slug();
+    if($detail) return get_post_meta(get_the_ID(),'_qav_seo_description',true) ?: qav_detail_pages()[$detail]['description'];
     if(qav_hub_is_page()) return 'Legal perspectives, professional commentary and selected media appearances from Qurat-ul-Ain Viirk, Advocate High Court.';
     if(is_front_page()) return qav_profile('seo_description');
     if(is_page('privacy')) return 'How the Qurat-ul-Ain Viirk website handles enquiries, administration cookies and optional video players.';
@@ -56,6 +59,8 @@ function qav_description(){
     return is_post_type_archive('qav_media')?'Media, interviews and legal conversations from Qurat-ul-Ain Viirk, Advocate High Court.':'Legal insights and professional perspectives from Qurat-ul-Ain Viirk, Advocate High Court.';
 }
 add_filter('pre_get_document_title',function($title){
+    $detail=qav_detail_slug();
+    if($detail) return get_post_meta(get_the_ID(),'_qav_seo_title',true) ?: qav_detail_pages()[$detail]['title'];
     if(is_front_page()) return qav_profile('seo_title');
     if(is_singular()){ $custom=get_post_meta(get_the_ID(),'_qav_seo_title',true); return ($custom?:get_the_title()).' | Qurat-ul-Ain Viirk'; }
     return (is_post_type_archive('qav_media')?'Media & Interviews':(is_404()?'Page not found':'Insights & Perspectives')).' | Qurat-ul-Ain Viirk';

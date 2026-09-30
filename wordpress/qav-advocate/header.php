@@ -74,8 +74,8 @@
             >QURAT-UL-AIN VIIRK<small>ADVOCATE HIGH COURT</small></span
           ></a
         >
-        <nav class="desktop-nav" aria-label="Main navigation"><a href="<?php echo esc_url(qav_home_anchor('about')); ?>">Profile</a><a href="<?php echo esc_url(qav_home_anchor('practice')); ?>">Practice</a><a href="<?php echo esc_url(qav_home_anchor('experience')); ?>">Experience</a><a href="<?php echo esc_url(qav_home_anchor('advocacy')); ?>">Advocacy</a><a href="insights-media.html">Insights &amp; Media</a><a href="<?php echo esc_url(qav_home_anchor('contact')); ?>">Contact</a></nav>
-        <a class="button button-gold header-cta" href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
+        <nav class="desktop-nav" aria-label="Main navigation"><?php qav_global_nav(); ?></nav>
+        <a class="button button-gold header-cta" href="<?php echo esc_url(qav_page_url('contact')); ?>"
           >Request Consultation<svg class="icon">
             <use href="#icon-arrow-up" /></svg
         ></a>
@@ -98,15 +98,8 @@
           Close <span aria-hidden="true">×</span>
         </button>
       </div>
-      <nav aria-label="Mobile navigation">
-        <a href="<?php echo esc_url(qav_home_anchor('about')); ?>">Profile</a>
-        <a href="<?php echo esc_url(qav_home_anchor('practice')); ?>">Practice</a>
-        <a href="<?php echo esc_url(qav_home_anchor('experience')); ?>">Experience</a>
-        <a href="<?php echo esc_url(qav_home_anchor('advocacy')); ?>">Advocacy</a>
-        <?php qav_hub_nav(); ?>
-        <a href="<?php echo esc_url(qav_home_anchor('contact')); ?>">Contact</a>
-      </nav>
-      <a class="button button-gold" href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
+      <nav aria-label="Mobile navigation"><?php qav_global_nav(); ?></nav>
+      <a class="button button-gold" href="<?php echo esc_url(qav_page_url('contact')); ?>"
         >Request a Consultation<svg class="icon">
           <use href="#icon-arrow-up" /></svg
       ></a>

@@ -1,0 +1,207 @@
+/* Rights and responsibility: editorial detail-page composition. */
+.advocacy-main .detail-hero-copy .text-link {
+  margin-top: 21px;
+}
+.advocacy-principles-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(48px, 8vw, 120px);
+}
+.advocacy-principles-statement > p {
+  margin: 30px 0 42px;
+  color: var(--ivory);
+  font-family: var(--font-display);
+  font-size: clamp(58px, 6.5vw, 90px);
+  letter-spacing: -2px;
+  line-height: 1.02;
+}
+.advocacy-principles-statement em {
+  color: var(--gold-light);
+}
+.advocacy-principles-note {
+  display: block;
+  padding-top: 22px;
+  border-top: 1px solid var(--dark-line);
+  color: var(--light-muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.9px;
+}
+.advocacy-rights article + article {
+  margin-top: 32px;
+  padding-top: 30px;
+  border-top: 1px solid var(--dark-line);
+}
+.advocacy-rights .detail-number {
+  color: var(--gold-light);
+}
+.advocacy-rights h3 {
+  margin: 13px 0 17px;
+  font-size: clamp(32px, 3.2vw, 43px);
+}
+.advocacy-rights p {
+  max-width: 520px;
+}
+.advocacy-rights .text-link {
+  margin-top: 16px;
+}
+.advocacy-focus-row {
+  display: grid;
+  grid-template-columns: 45px minmax(0, 1fr) minmax(0, 1.12fr);
+  column-gap: clamp(24px, 4vw, 60px);
+  align-items: start;
+  padding: 39px 0;
+  border-top: 1px solid var(--line);
+}
+.advocacy-focus-row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.advocacy-focus-row > .detail-number {
+  padding-top: 5px;
+}
+.advocacy-focus-icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 20px;
+  fill: none;
+  stroke: var(--gold-dark);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.advocacy-focus-heading h3 {
+  font-size: clamp(27px, 2.8vw, 37px);
+  line-height: 1.12;
+  letter-spacing: -0.4px;
+}
+.advocacy-focus-copy > p {
+  color: var(--muted);
+}
+.advocacy-focus-copy > p:first-child {
+  color: var(--text);
+}
+.advocacy-focus-copy > p + p {
+  margin-top: 13px;
+}
+.advocacy-focus-copy .text-link {
+  margin-top: 20px;
+}
+.advocacy-education {
+  background: var(--paper);
+}
+.advocacy-education-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(45px, 8vw, 120px);
+}
+.advocacy-education-intro > .eyebrow,
+.advocacy-community-grid .eyebrow {
+  margin-bottom: 20px;
+}
+.advocacy-education-intro > .detail-intro {
+  margin-top: 24px;
+}
+.advocacy-education-intro img {
+  width: 100%;
+  max-width: 470px;
+  margin-top: 26px;
+  mix-blend-mode: multiply;
+}
+.advocacy-education-copy article {
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.advocacy-education-copy article + article {
+  margin-top: 34px;
+}
+.advocacy-education-copy h3 {
+  margin: 15px 0 23px;
+  font-size: clamp(28px, 2.8vw, 37px);
+}
+.advocacy-education-copy article > p:not(.eyebrow) {
+  color: var(--muted);
+}
+.advocacy-education-copy .text-link {
+  margin-top: 19px;
+}
+.advocacy-community-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(40px, 8vw, 120px);
+  margin-bottom: 64px;
+}
+.advocacy-community-copy {
+  max-width: 510px;
+  color: var(--muted);
+}
+.advocacy-community-copy .advocacy-community-line {
+  margin-top: 26px;
+  color: var(--gold-dark);
+  font-family: var(--font-display);
+  font-size: 29px;
+  font-style: italic;
+  line-height: 1.25;
+}
+@media (max-width: 900px) {
+  .advocacy-focus-row {
+    grid-template-columns: 28px minmax(0, 0.9fr) minmax(0, 1.1fr);
+    column-gap: 25px;
+  }
+  .advocacy-principles-grid,
+  .advocacy-education-grid,
+  .advocacy-community-grid {
+    gap: 40px;
+  }
+}
+@media (max-width: 700px) {
+  .advocacy-principles-grid,
+  .advocacy-education-grid,
+  .advocacy-community-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .advocacy-principles-statement > p {
+    font-size: clamp(58px, 11vw, 76px);
+    margin-bottom: 28px;
+  }
+  .advocacy-rights article + article {
+    margin-top: 26px;
+    padding-top: 26px;
+  }
+  .advocacy-focus-row {
+    grid-template-columns: 27px minmax(0, 1fr);
+    gap: 22px 19px;
+    padding-block: 30px;
+  }
+  .advocacy-focus-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .advocacy-focus-icon {
+    margin-bottom: 15px;
+  }
+  .advocacy-focus-copy {
+    grid-column: 2;
+  }
+  .advocacy-education-intro img {
+    max-width: 390px;
+    margin: 20px auto 0;
+  }
+  .advocacy-community-grid {
+    gap: 25px;
+    margin-bottom: 43px;
+  }
+}
+@media (max-width: 380px) {
+  .advocacy-focus-row {
+    column-gap: 12px;
+    grid-template-columns: 21px minmax(0, 1fr);
+  }
+  .advocacy-focus-heading h3 {
+    font-size: 26px;
+  }
+  .advocacy-focus-copy .text-link {
+    gap: 12px;
+  }
+}

@@ -1,5 +1,21 @@
 # Verification record — Qurat-ul-Ain Viirk
 
+## Multi-page expansion — 30 September 2026
+
+Created the Practice, Experience, Advocacy and Contact destinations, with shared editorial styles, six-item desktop/mobile navigation, active states, metadata, sitemap entries and homepage exploration links. The corresponding WordPress templates use native page URLs and the existing professional-profile fields.
+
+- Browser layout checks passed for all nine public static pages at **1440, 1280, 1024, 768, 480, 414, 390, 375 and 320 pixels**. No horizontal page/menu overflow, clipped main content, duplicate IDs or overlapping menu/consultation controls were found. Desktop and mobile screenshots of all four new pages were visually inspected. The final typography adjustment was rechecked at 1440, 390 and 320 pixels.
+- All 36 primary mobile-navigation journeys between the homepage and five destinations passed. Menu open/close, Escape, keyboard focus containment, active links and the existing footer admin-access entry were checked.
+- The contact form rejects incomplete entries, preserves the existing details/disclaimer, prepares the correct `mailto:` draft and explicitly reports that nothing was sent. Draft invalidation on edit and all nine practice-category prefills passed. No submission request was made. Normal and reduced-motion behavior passed; no page JavaScript exceptions or console errors were recorded.
+- Source comparison confirms that homepage factual content is retained and the Insights & Media main markup changes only in its consultation-link destination. The dedicated Contact form preserves the existing form markup. All nine practice descriptions, eight experience timeline statements, dates, institutions, qualifications and contact details were reviewed against the homepage. No new professional claims were added.
+- JavaScript syntax and targeted WordPress generation checks passed. The generator was run repeatedly without duplicating homepage CTAs. PHP/WordPress runtime validation was unavailable in this checkout and remains a host-side verification step. No deployment was performed.
+
+### Existing asset gaps found during this audit
+
+The checkout already lacks `assets/fonts/cormorant-garamond-medium.woff2`, `assets/fonts/cormorant-garamond-italic.woff2` and `assets/fonts/manrope-variable.woff2`; local previews therefore use the existing fallback fonts. The approved Insights & Media markup also already references missing `assets/images/selected-media/architecture.jpg`, `architecture-640.webp` and `broadcast-backdrop-640.jpg`. These are pre-existing source gaps, not new page assets. Original approved files are needed to resolve them without changing the approved typography/gallery. No gallery content or image references were changed in this task.
+
+## Previous publishing-system verification
+
 Verified locally on **13 September 2026**, using **WordPress 7.1**, **PHP 8.3**, the official WordPress Playground development runtime and installed Google Chrome through Playwright. The in-app browser connection was unavailable. Production MySQL/MariaDB hosting has not been configured.
 
 ## Sources and visual preservation

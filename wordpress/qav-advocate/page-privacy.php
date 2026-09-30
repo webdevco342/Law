@@ -1,6 +1,6 @@
 <?php get_header(); ?><main class="privacy-main" id="main">
       <div class="container privacy-content">
-        <a class="text-link" href="<?php echo esc_url(qav_home_anchor('contact')); ?>"
+        <a class="text-link" href="<?php echo esc_url(qav_page_url('contact')); ?>"
           >← Return to consultation</a
         >
         <p class="eyebrow">WEBSITE INFORMATION</p>

@@ -15,26 +15,20 @@
           </div>
           <div>
             <h2 class="eyebrow">EXPLORE</h2>
-            <nav aria-label="Footer navigation">
-              <a href="<?php echo esc_url(qav_home_anchor('home')); ?>">Home</a><a href="<?php echo esc_url(qav_home_anchor('about')); ?>">About</a
-              ><a href="<?php echo esc_url(qav_home_anchor('experience')); ?>">Experience</a
-              ><a href="<?php echo esc_url(qav_home_anchor('advocacy')); ?>">Advocacy</a
-              ><a href="<?php echo esc_url(qav_home_anchor('credentials')); ?>">Credentials</a
-              ><a href="<?php echo esc_url(qav_home_anchor('contact')); ?>">Contact</a>
-            </nav>
+            <nav aria-label="Footer navigation"><?php qav_global_nav(); ?></nav>
           </div>
           <div>
             <h2 class="eyebrow">THE PRACTICE</h2>
             <nav aria-label="Practice navigation">
-              <a href="<?php echo esc_url(qav_home_anchor('contact')); ?>" data-matter="Civil Matter">Civil Litigation</a
-              ><a href="<?php echo esc_url(qav_home_anchor('contact')); ?>" data-matter="Criminal Matter"
+              <a href="<?php echo esc_url(add_query_arg('matter','Civil Matter',qav_page_url('contact'))); ?>" data-matter="Civil Matter">Civil Litigation</a
+              ><a href="<?php echo esc_url(add_query_arg('matter','Criminal Matter',qav_page_url('contact'))); ?>" data-matter="Criminal Matter"
                 >Criminal Litigation</a
-              ><a href="<?php echo esc_url(qav_home_anchor('contact')); ?>" data-matter="Corporate / Contract Matter"
+              ><a href="<?php echo esc_url(add_query_arg('matter','Corporate / Contract Matter',qav_page_url('contact'))); ?>" data-matter="Corporate / Contract Matter"
                 >Corporate Advisory</a
-              ><a href="<?php echo esc_url(qav_home_anchor('contact')); ?>" data-matter="Banking Matter">Banking Law</a
-              ><a href="<?php echo esc_url(qav_home_anchor('contact')); ?>" data-matter="Property / LDA Matter"
+              ><a href="<?php echo esc_url(add_query_arg('matter','Banking Matter',qav_page_url('contact'))); ?>" data-matter="Banking Matter">Banking Law</a
+              ><a href="<?php echo esc_url(add_query_arg('matter','Property / LDA Matter',qav_page_url('contact'))); ?>" data-matter="Property / LDA Matter"
                 >Property &amp; LDA Matters</a
-              ><a href="<?php echo esc_url(qav_home_anchor('advocacy')); ?>">Anti-Harassment &amp; Women’s Rights</a>
+              ><a href="<?php echo esc_url(qav_page_url('advocacy')); ?>">Anti-Harassment &amp; Women’s Rights</a>
             </nav>
           </div>
           <div class="footer-contact">
@@ -66,7 +60,7 @@
             reserved.</span
           >
           <div>
-            <a href="<?php echo esc_url(qav_insights_url()); ?>">Insights</a><a href="<?php echo esc_url(qav_media_url()); ?>">Media</a><a href="<?php echo esc_url(home_url('/privacy/')); ?>">Privacy Notice</a
+            <a href="<?php echo esc_url(qav_hub_url()); ?>">Insights</a><a href="<?php echo esc_url(qav_hub_url()); ?>">Media</a><a href="<?php echo esc_url(home_url('/privacy/')); ?>">Privacy Notice</a
             ><a href="#disclaimer">Legal Disclaimer</a
             ><a href="<?php echo esc_url(qav_home_anchor('home')); ?>" class="back-top">Back to top ↑</a>
           </div>

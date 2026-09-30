@@ -163,8 +163,15 @@
   const year = document.querySelector("#copyright-year");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  initializeAdminAccess();
+
   const form = document.querySelector("#enquiry-form");
   if (!form) return;
+  // Dedicated-page consultation links can carry one of the existing matter options.
+  const requestedMatter = new URLSearchParams(window.location.search).get("matter");
+  const matterField = form.elements.namedItem("matter");
+  if (requestedMatter && [...matterField.options].some((option) => option.value === requestedMatter))
+    matterField.value = requestedMatter;
   const status = document.querySelector("#form-status");
   const fallback = document.querySelector("#email-fallback");
   const draftLink = document.querySelector("#email-draft");
@@ -398,6 +405,7 @@
   });
 
   // Admin Panel Access Logic
+  function initializeAdminAccess() {
   const adminTrigger = document.getElementById("admin-login-trigger");
   const adminModal = document.getElementById("admin-login-modal");
   if (adminTrigger && adminModal) {
@@ -439,5 +447,6 @@
       if (e.key === "Enter") attemptLogin();
       if (e.key === "Escape") closeModal();
     });
+  }
   }
 })();
